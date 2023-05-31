@@ -1,19 +1,11 @@
-// import React from "react";
+
 import Image from 'next/image';
-// import card from '../public/assets/img/personal_info.png'
-
-// import techcity from "/techcity.webp";
 import Developer from "../public/Developer.svg";
-// import mySVG from "/undraw_svg.svg";
-// import Linkedin from "/linkedin.svg";
-
 function About() {
     return (
         <section id="about">
             <div className="container  pt-4 overflow-hidden pb-4  px-3 px-lg-4 pb-3">
-                {/*<img src={card} alt="Personal info illustration"/>*/}
                 <h1 className="header1 ">O mnie</h1>
-                {/*<div className="row">*/}
 
                 <div className=" row ">
                     <div className="col order-lg-2 d-flex justify-content-center mt-3 mt-lg-0  mb-5 mb-lg-0">
@@ -55,7 +47,7 @@ function About() {
                             które z sukcesem odnoszę do swojego życia. <br/>
                             Codziennie czytam, oprócz książek o himalaiźmie, buddyźmie i duchowości, filozofii czy historii,
                              interesuję się  fizyką i&nbsp;kosmosem, dzięki wszystkim tym zainteresowaniom i&nbsp;pasjom,
-                            regularnie uświadamiam sobie, że
+                            zdaję sobie sprawę, że
 
                         </p>
                         <h1 className="rajdhani font-700 my-1 text-center possible">
@@ -64,9 +56,7 @@ function About() {
                     </article>
                 </div>
                 <hr className="line1"/>
-                {/*<div className="techCity w-100 d-flex justify-content-center">*/}
-                {/*  <img src={techcity} alt="Tech illustration" />*/}
-                {/*</div>*/}
+
             </div>
         </section>
     );

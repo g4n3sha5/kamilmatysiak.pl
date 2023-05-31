@@ -32,7 +32,8 @@ section{
   --heroBlue:#3f37c9;
   --pinkBlue:#5F0CBD;
   --purpleBlue:#2016C1;
-
+  --contactBlue:#5311B5;
+  --footerBlue:#3D00A1;
   --heightNoNav: calc(100vh - var(--navHeight));
 }
 
@@ -56,7 +57,7 @@ html {
   box-sizing: border-box;
 }
 
-.fitImg {
+.fitImg img{
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -132,7 +133,7 @@ h3{
   font-weight:400;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 768px) {
   .heroSquare {
     width: 99%;
   }
@@ -177,7 +178,7 @@ h3{
 }
 .socialIcons a:hover svg {
   fill: var(--paleBlack);
-  transform:scale(1.15);
+  transform:scale(1.08);
 }
 .socialIcons a{
   width:65px;
@@ -217,8 +218,9 @@ h3{
 header {
   height: var(--navHeight);
   /*background-color: ghostwhite !important;*/
-  background-color: var(--navPrimary) !important;
+  /*background-color: var(--navPrimary) !important;*/
   font-size: 25px;
+  background:rgba(0,0,0, 0.08);
   letter-spacing: 2px;
 }
 
@@ -323,8 +325,12 @@ header {
   box-shadow: -5px -5px 0 var(--lightBlue);
   border:1px solid black;
 }
-.techCity img {
-  width: 15vw;
+.techCity {
+
+  width:65% !important;
+  height:auto;
+  padding-top:25px;
+  padding-left:10px;
 }
 .line1 {
   background-color:lightgray;
@@ -346,6 +352,7 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
 }
 #technologies p:first-of-type{
   font-weight:400;
@@ -359,7 +366,7 @@ text-align: center;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  margin: 6px 17px 25px;
+  margin: 6px 12px 14px;
 }
 .techWrapper h6{
   font-size:1.2rem;
@@ -367,8 +374,8 @@ text-align: center;
   letter-spacing: 2px;
 }
 .techIcon {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
 }
 
 /*======== PROJECTS =======*/
@@ -378,12 +385,13 @@ text-align: center;
   /*background:var(--blueTechs);*/
   /*background-image: linear-gradient( 180deg,  #362d9e 60%, var(--cyanBlue) 92.3% );*/
     color:white;
+  position:relative;
 }
 .project{
   color:white;
   box-shadow: 0 0 15px 0 var(--cyanBlue);
-  min-width:80%;
-  max-height:450px;
+  width:58vw;
+  height:420px;
   background:var(--heroBlue);
   border: 1px solid var(--lightBlue);
   /*border: 1px solid rgba(255, 255, 255, 0.125);*/
@@ -393,16 +401,41 @@ text-align: center;
   border-radius:8px;
   overflow:hidden;
 }
-.projectMain{
-  /*backdrop-filter: blur(16px) saturate(180%);*/
-  /*-webkit-backdrop-filter: blur(16px) saturate(180%);*/
-  /*!*background-color: rgba(17, 25, 40, 0.75);*!*/
-  /*border-radius: 12px;*/
-  width:75%;
-  height:100%;
-  font-size:1.1em;
-  background:var(--paleBlack);
+@media (max-width: 768px) {
+  .project{
+    width:90vw;
+  }
 }
+#projects .shape-fill {
+  fill: var(--contactBlue);
+}
+.projectMain{
+  background: var(--blueTechs);
+  width:80%;
+  font-size:1.1em;
+  /*background:var(--cyanBlue);*/
+  /*background:#070210;*/
+  color:white;
+
+}
+.projectLogo {
+  display:none;
+}
+@media (max-width: 1280px) {
+
+  .projectMain{
+    flex:100%;
+    display:none !important;
+  }
+  .projectLogo{
+    display:block;
+    width:75px;
+  }
+  .project{
+    height:auto;
+  }
+}
+
 .showProject{
   background:var(--blueTechs);
 }
@@ -427,13 +460,13 @@ text-align: center;
 
 }
 .projectMain img{
-  max-width:100%;
+  width:100%;
+  height:auto;
   max-height: 100%;
-  object-fit:cover   ;
+  object-fit:cover;
 
 }
-.project aside{
-
+.projectRight{
   flex:1;
   height:100%;
 }
@@ -442,6 +475,10 @@ text-align: center;
   height:50%;
   width:100%;
   margin-top:auto;
+
+}
+.projectIcons h1{
+  text-align: center;
 }
 .activeIcon{
   background:var(--cyanBlue) !important;
@@ -469,15 +506,14 @@ text-align: center;
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
   color:white;
+
 }
 
 .BtnComponent:hover{
   transform:scale(1.1);
   cursor:pointer;
 }
-.BtnComponent{
-  padding:7px;
-}
+
 .BtnComponent img{
   width:40px;
   height:40px;
@@ -494,24 +530,45 @@ text-align: center;
   margin-top:4px
 }
 /* ======= Contact ========*/
+
 #contact{
   color:white;
-  background-color:#6E07F3;
+  background-color:var(--contactBlue);
   min-height:600px;
+  position:relative;
+  padding:60px 0;
+
 }
-#contact form{
+#contact .shape-fill {
+  fill: var(--footerBlue);
+}
+.contactForm{
   display:flex;
   flex-direction:column;
-
+  width:80%;
+  min-height:500px;
+  /*max-height:550px;*/
   background: rgba(54, 3, 154, 0.75);
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.4 );
   backdrop-filter: blur( 5px );
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
-  border: 2px solid var(--lightBlue);
+  border: 3px solid var(--lightBlue);
   /*border: 1px solid rgba( 1, 255, 255, 0.18 );*/
-  padding:2.2em;
+  padding:9px;
   font-size:1.1em;
+}
+@media (max-width: 768px) {
+  .contactForm{
+    width:100%;
+    max-height:none;
+  }
+  .techCity{
+    width:100% !important;
+  }
+}
+.contactForm button{
+  border:1px solid var(--cyanBlue);
 }
 #contact form label{
   margin:0;
@@ -519,12 +576,9 @@ text-align: center;
   letter-spacing:1px;
   font-weight: 400;
 }
-.contactForm{
-  width:80%;
-}
+
 
 #contact form input{
-
   padding:0.5em;
   font-size:0.8em;
   -webkit-appearance: none;
@@ -533,11 +587,12 @@ text-align: center;
 margin-bottom:15px;
 
 }
-#contact form *:not(label){
+#contact form input, textarea{
   box-shadow: 3px 3px 0 var(--lightBlue);
   /*box-shadow: 0 0 25px 0 rgba( 255, 255, 255, 0.86);*/
-
+  border:1px solid white;
 }
+
 #contact form input[type=email]{
   width:40%;
 }
@@ -546,9 +601,42 @@ margin-bottom:15px;
 }
 #contact form textarea{
   min-height:115px;
+  max-height:180px;
+  padding:5px;
+}
+ #contact form textarea:focus{
+  border: none;
+  overflow: hidden;
+  outline: none;
+
+}
+#contact form input:focus,
+#contact form textarea:focus,
+#contact form button:hover{
+  box-shadow: 6px 6px 0 var(--lightBlue);
+}
+#contact form div{
+  margin-top:8px;
+  margin-left:3px;
+  height:25px;
+}
+#contact form h2{
+  font-size:1.2em;
 }
 /*/===== Footer =====*/
 footer{
-  background-color:var(--paleBlack);
-  min-height:150px;
+  background-color:var(--footerBlue);
+  min-height:75px;
+  padding-top:10px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+footer h2{
+  font-size:21px;
+  letter-spacing:2px;
+  color:white !important;
+  display:inline;
+  padding:11px;
+  border-top: 1px solid white;
 }

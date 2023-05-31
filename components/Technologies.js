@@ -2,6 +2,7 @@ import HTML from "../public/techs/HTML.svg";
 import CSS from "../public/techs/CSS.svg";
 import JavaScript from "../public/techs/JavaScript.svg";
 import iReact from "../public/techs/React.svg";
+import NextJS from "../public/techs/NextJS.svg";
 import Bootstrap from "../public/techs/Bootstrap.svg";
 import Python from "../public/techs/Python.svg";
 import Django from "../public/techs/Django.svg";
@@ -23,6 +24,7 @@ const langs = [
     {name: "CSS", icon: CSS},
     {name: "JavaScript", icon: JavaScript},
     {name: "React", icon: iReact},
+    {name: "NextJS", icon: NextJS},
     {name: "Bootstrap", icon: Bootstrap},
     {name: "Python", icon: Python},
     {name: "Django", icon: Django},
@@ -64,7 +66,7 @@ const TechDiv = ({arr}) => {
 const Technologies = () => {
     return (
         <section id="technologies">
-            <div className="container px-4  overflow-hidden">
+            <div className="container-fluid px-lg-4  overflow-hidden">
                 <article className="mb-5">
                     <h1 className="header1">Technologie</h1>
                     <p>
