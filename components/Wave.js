@@ -1,6 +1,7 @@
 const Wave = () =>{
     return(
-        <div className="custom-shape-divider-bottom-1682337666">
+        <div aria-hidden="true"
+            className="custom-shape-divider-bottom-1682337666">
             <svg
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"

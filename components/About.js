@@ -1,29 +1,32 @@
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import Developer from "../public/Developer.svg";
-function About() {
+
+import {useRouter} from "next/router";
+import {Trans, useTranslation} from "next-i18next";
+
+const About = () => {
+
+    const {locale} = useRouter()
+    const {t } = useTranslation('index')
     return (
+
         <section id="about">
             <div className="container  pt-4 overflow-hidden pb-4  px-3 px-lg-4 pb-3">
-                <h1 className="header1 ">O mnie</h1>
+                <h1 className="header1 ">{t("About")}</h1>
 
                 <div className=" row ">
                     <div className="col order-lg-2 d-flex justify-content-center mt-3 mt-lg-0  mb-5 mb-lg-0">
                         <div className="aboutProfile">
-                            <img src="/profile.jpg" alt="Profile picture"/>
+                            <img aria-hidden="true" src="/profile.jpg" alt="Profile picture"/>
                         </div>
                     </div>
 
                     <article className="col-lg-8 col-12">
-                        <p className="paragraph1">
-                            Jestem osobą nastawioną na rozwiązywanie problemów, z dużym
-                            opanowaniem i&nbsp;umysłem analitycznym. Te cechy sprawiają, że
-                            świetnie odnajduję się w branży IT.
-                            <br/>
-                            Pierwszą styczność z tworzeniem stron miałem w roku 2019, nauczyłem się wielu rzeczy, jednak traktowałem to jako hobby.
-                            Bazując na tych podstawach, w&nbsp;2022r. podjąłem decyzję, aby powrócić do webdevu na
-                            poważnie i&nbsp;tworząc nowe projekty konsekwentnie rozwijam swoją
-                            wiedzę i&nbsp;umiejętności.
+                        <p className="paragraph1 ">
+
+                            <Trans i18nKey="About Paragraph1" t={t}> </Trans>
+
                         </p>
                     </article>
                 </div>
@@ -39,19 +42,11 @@ function About() {
                     </div>
                     <article className="col-lg-8">
                         <p className="paragraph1">
-                            Jestem entuzjastą nowych technologii,  od zawsze fascynowały mnie
-                            komputery, elektronika i&nbsp;ich sposób działania. Zakres moich
-                            zainteresowań jest szeroki, jednak moją największą pasją są sztuki
-                            walki, które nauczyły mnie wielu rzeczy m.in konsekwencji
-                            i&nbsp;wartości małych ulepszeń zarówno na treningu jak i w naszym życiu  (kaizen) wszystkie te dziedziny wnoszą wiele nauk,
-                            które z sukcesem odnoszę do swojego życia. <br/>
-                            Codziennie czytam, oprócz książek o himalaiźmie, buddyźmie i duchowości, filozofii czy historii,
-                             interesuję się  fizyką i&nbsp;kosmosem, dzięki wszystkim tym zainteresowaniom i&nbsp;pasjom,
-                            zdaję sobie sprawę, że
+                            <Trans i18nKey="About Paragraph2" t={t}></Trans>
 
                         </p>
                         <h1 className="rajdhani font-700 my-1 text-center possible">
-                            wszystko jest możliwe.
+                            {t("Possible")}
                         </h1>
                     </article>
                 </div>

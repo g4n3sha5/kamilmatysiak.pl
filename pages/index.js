@@ -10,13 +10,24 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
+import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
+
+
 const inter = Inter({subsets: ['latin']})
+
+export async function getStaticProps({locale}) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ["index"])),
+        }
+    }
+}
 
 export default function Home() {
     return (
         <>
             {/*<Head/>*/}
-              <main>
+            <main>
                 <Navbar/>
                 <Hero/>
                 <About/>
@@ -26,5 +37,5 @@ export default function Home() {
                 <Footer/>
             </main>
         </>
-)
+    )
 }

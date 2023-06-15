@@ -1,0 +1,28 @@
+{
+  "About" :  "About me",
+  "Technologies": "Technologies",
+  "Projects" : "Projects",
+  "Contact" : "Contact",
+  "My name is" :"Hello, my name is ",
+  "I am" : "I am a Junior Web Developer",
+
+  "About Paragraph1" : "I am a solution-oriented person with great composure and an analytical mind. These qualities make me a great fit for the IT industry. \nIn school I learned programming in C++, the basics of frontend, and theory about networks and computers. I have been developing first projects since 2019, like the game of 'pacman' or tic-tac-toe etc. in JavaScript and Python. That gave me great foundations, basing on which in year 2022 I made the decision to become a Web Developer and by creating new projects I consistently develop my knowledge and skills.",
+  "About Paragraph2" : "I am an enthusiast of new technologies, I have always been fascinated by computers, electronics and how they work. The range of my interests is wide, but my greatest passion is Martial Arts, which have taught me a lot of important life lessons including consistency and the value of small improvements both in training and in our lives (kaizen). \nI read every day, in addition to books on Himalayanism, Buddhism and spirituality, philosophy or history, I am interested in physics and space, all of which bring a lot of lessons that I successfully apply to my life, and through this knowledge I realize that",
+  "Possible" : "everything is possible",
+  "Technologies Description" : "In my life I have used many types of software, depending on the work I did, hence I have become familiar with various applications, ERP systems or internal platforms of companies. In addition, for myself or as part of business, I have done a lot of photo processing and graphic design. As a result, familiarity with new technologies and systems comes quickly to me. I believe that the simplest solutions are the best.",
+  "Languages" : "In my work so far, I have used the following languages and libraries:",
+  "Tools" : "And also the following tools:",
+  "Projects Description" : "First projects in JavaScript and Python (to-do, simple games, tic-tac-toe, business card, etc). These were projects created since 2019, at that time I did not use GitHub hence most of these projects were lost in the depths of disks. However the knowledge remained and now my most important web projects are:",
+  "Crypto Description" : "Static website for my cryptocurrency business project. Custom UX and logo design.",
+  "Crypto name" :  "Crypto exchange business page",
+  "VA Description" : "This web application contains tools related to productivity and grappling martial arts - specifically for Brazilian Jiu-Jitsu.\n \n I am the author of the whole idea, functionalities \nas well as the creator of the logo and name, I created the UX and UI using Bootstrap, JavaScript and HTMX, as well as the database logic and backend in Django.\nThe project serves me and the people in the club. The application is open-source and remains in beta as of 05/06/2023. \nThe application contains a lot of functionality and is divided into several modules:\n\n(a) Clubs \n- Club members (profiles of other people and permission manager)\n- Club schedule (generator)\n- Club workouts  \n- List of clubs, any user can ask a club (authorized members) to join it \n\nb) BJJournal (Brazilian Jiu - Jitsu Journal)\n- Statistics\n- Add a training session (record the type of session, length, techniques learned, etc.).\n- Your training sessions (list all sessions, where the user can edit or delete each session)\n- Open techniques database (where any user can add a Jiu Jitsu technique (name, type, etc.) and add Suggestions to other techniques)\n- A simple to do application, where the user can add a list, and to-do items in each list.\n\n(c) Notifications)\n- Notify eligible members of applications\n\nd) Account / Profile (Account / Profile)\n- Manage account (change password / email) and profile (personal information (optional) - user avatar, belt, bio etc).",
+  "Portfolio Description" : "My personal page :) Project made with React / NextJS.",
+  "Portfolio name" : "Portfolio page",
+  "Interested" : "If you are interested in me and would like to cooperate or ask a question, please do not hesitate to contact me.",
+  "E-mail": "Your e-mail",
+  "Subject" : "Subject",
+  "Message" : "Message",
+  "Send" : "Send",
+  "Message sent" : "Your message has been sent!",
+  "Close" : "Close"
+}

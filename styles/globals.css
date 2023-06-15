@@ -20,23 +20,32 @@ section{
 :root {
   --navHeight: 78px;
 
-  --navPrimary: rgba(63, 55, 201, 0.85);
+  --navPrimary: rgba(63, 55, 201, 0.98);
   /*--navPrimary: #3f37c9;*/
   --paleblue: #4361ee;
   --lightBlue: #1bd8fb;
   --cyanBlue : #4ccaf0;
   --blueDarker: #2e2686;
   /*--blueTechs: #141C3A;*/
-  --blueTechs: #4129a2;
+  /*--blueTechs: #2b08e0 ;*/
+  --blueTechs: #3b10d3 ;
   --paleBlack: #191919;
   --heroBlue:#3f37c9;
   --pinkBlue:#5F0CBD;
   --purpleBlue:#2016C1;
-  --contactBlue:#5311B5;
-  --footerBlue:#3D00A1;
+  --projectsBlue:#1f075b  ;
+  --contactBlue:var(--paleBlack);
+  /*--contactBlue:#5311B5;*/
+  --footerBlue:#00b4d8;
+  /*--footerBlue:#4ccaf0;*/
+  /*--footerBlue:#3D00A1;*/
   --heightNoNav: calc(100vh - var(--navHeight));
 }
-
+@media(min-width:2200px){
+  :root {
+  --heightNoNav:  70vh;
+  }
+}
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
@@ -135,7 +144,7 @@ h3{
 
 @media (max-width: 768px) {
   .heroSquare {
-    width: 99%;
+    width: 95%;
   }
 
   .heroImg {
@@ -217,10 +226,8 @@ h3{
 }
 header {
   height: var(--navHeight);
-  /*background-color: ghostwhite !important;*/
-  /*background-color: var(--navPrimary) !important;*/
   font-size: 25px;
-  background:rgba(0,0,0, 0.08);
+  background: var(--navPrimary);
   letter-spacing: 2px;
 }
 
@@ -230,38 +237,61 @@ header {
   font-weight: 500 !important;
   opacity: 0.85;
 }
+.navbar-collapse {
+  background: var(--navPrimary);
+  transition: transform 0.4s ease 0s;
+  height:380px;
+  transform: translateY(-380px);
+  z-index:1;
 
-@media (min-width: 768px) {
+}
+.navShow{
+
+  transform: translateY(0);
+}
+@media (min-width: 1200px) {
   .navbar-nav {
     margin-right: 10% !important;
   }
-
   .navbar-collapse {
-    background-color: transparent !important;
+    background:transparent;
+  }
+  header{
+    background:rgba(0,0,0, 0.08);
+  }
+  .nav-link:hover {
+    border-top: 3px solid white;
+    opacity: 1;
+  }
+  .navbar-collapse{
+    transform: translateY(0px);
+    height:auto;
   }
 }
-
 .navbar-brand img {
   width: 270px;
   height: 56px;
   margin-left: 1vw;
+  z-index:55;
 }
 
+@media (max-width: 350px) {
+  .navbar-brand img {
+    width: 150px;
+    height: 31px;
+
+    z-index:55;
+  }
+}
+
+.navbar-toggler{
+  z-index:55;
+}
 .navbar-brand {
   padding-top: 2px;
 }
-
-.navbar-collapse {
-  background-color: inherit;
-}
-
 .nav-item {
   margin: 0 7px;
-}
-
-.nav-link:hover {
-  border-top: 3px solid white;
-  opacity: 1;
 }
 
 .scrolled1 {
@@ -270,7 +300,42 @@ header {
 .scrolled2 {
   background-color: var(--blueDarker) !important;
 }
-/* ========= ABOUT ===========*/
+.flagIMG{
+  width:60px;
+  height:45px;
+}
+.flagIMG img{
+  width:100%;
+  height:100%;
+  background: rgba( 255, 255, 255, 0.12 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 5px );
+  -webkit-backdrop-filter: blur( 5px );
+  padding:0 3px;
+}
+.flagWrap{
+  position:relative;
+  display:flex;
+  justify-content: center;
+}
+.secondLang{
+  display:none;
+  position:absolute;
+}
+.secondLang img:hover {
+  transform:scale(1.1 );
+}
+
+.flagWrap:hover{
+  cursor:pointer !important;
+
+}
+.flagWrap:hover .secondLang{
+  display:block !important;
+
+}
+
+/* ========= ABO UT ===========*/
 #about {
   min-height: var(--heightNoNav);
   /*background-color:white;*/
@@ -278,7 +343,9 @@ header {
   color: white;
   position:relative;
 }
-
+#about .paragraph1{
+  white-space: pre-wrap;
+}
 /*#about .container > h1:first-of-type*/
 .header1
 {
@@ -295,6 +362,12 @@ header {
   font-size: 1.1em;
   font-weight:300;
 }
+@media (max-width: 1024px) {
+  #about .paragraph1{
+    font-size:19px;
+  }
+}
+
 .paragraph1 {
   line-height: 1.7;
   letter-spacing: 1px;
@@ -326,11 +399,23 @@ header {
   border:1px solid black;
 }
 .techCity {
-
-  width:65% !important;
+  width:35vw !important;
   height:auto;
-  padding-top:25px;
+  padding-top:45px;
   padding-left:10px;
+}
+.techCity h6{
+  font-size:10px;
+  font-family: "Lato", sans-serif;
+  text-align: right;
+  color:cyan;
+  padding:3px;
+  position:absolute;
+  bottom:0;
+  margin-left:10px;
+}
+.techCity a{
+  color:white;
 }
 .line1 {
   background-color:lightgray;
@@ -367,7 +452,9 @@ text-align: center;
   flex-wrap: wrap;
   align-items: center;
   margin: 6px 12px 14px;
+
 }
+
 .techWrapper h6{
   font-size:1.2rem;
   font-weight: 500;
@@ -377,21 +464,35 @@ text-align: center;
   width: 45px;
   height: 45px;
 }
-
-/*======== PROJECTS =======*/
+#technologies article:last-of-type{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:45px;
+}
+#technologies article:last-of-type h2{
+  border-top:1px solid white;
+  display:inline;
+  padding:12px;
+  width:50%;
+}
+  /*======== PROJECTS =======*/
 #projects{
   min-height: var(--heightNoNav);
-  background:#36039A;
+  background:var(--footerBlue) ;
+  background:var(--projectsBlue);
   /*background:var(--blueTechs);*/
   /*background-image: linear-gradient( 180deg,  #362d9e 60%, var(--cyanBlue) 92.3% );*/
     color:white;
   position:relative;
 }
+
 .project{
   color:white;
   box-shadow: 0 0 15px 0 var(--cyanBlue);
-  width:58vw;
-  height:420px;
+  /*width:1200px;*/
+  /*height:450px;*/
+  max-width:1200px;
   background:var(--heroBlue);
   border: 1px solid var(--lightBlue);
   /*border: 1px solid rgba(255, 255, 255, 0.125);*/
@@ -401,48 +502,41 @@ text-align: center;
   border-radius:8px;
   overflow:hidden;
 }
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
   .project{
-    width:90vw;
+    width:85vw;
   }
 }
+
 #projects .shape-fill {
   fill: var(--contactBlue);
 }
-.projectMain{
-  background: var(--blueTechs);
-  width:80%;
-  font-size:1.1em;
-  /*background:var(--cyanBlue);*/
-  /*background:#070210;*/
-  color:white;
 
+.projectMain{
+  font-size:1.1em;
+  color:white;
+  /*width:80%;*/
+  width:800px;
+  height:396px;
+}
+.projectMain .paragraph2{
+  /*background: rgba(0,0,0,0.35);*/
+  width:100%;
 }
 .projectLogo {
-  display:none;
+ width:75px;
 }
-@media (max-width: 1280px) {
-
-  .projectMain{
-    flex:100%;
-    display:none !important;
-  }
-  .projectLogo{
-    display:block;
-    width:75px;
-  }
-  .project{
-    height:auto;
-  }
-}
-
-.showProject{
-  background:var(--blueTechs);
+.projectMain{
+  background: rgba(0,0,0,0.35);
 }
 .customScroll::-webkit-scrollbar {
   width: 12px;
 }
-
+@media (max-width:912px){
+  .customScroll::-webkit-scrollbar{
+    width:20px;
+  }
+}
 .customScroll::-webkit-scrollbar-track {
   border-radius: 8px;
   background-color: #e7e7e7;
@@ -451,8 +545,8 @@ text-align: center;
 
 .customScroll::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background-color: var(--paleBlack);
-  border: 1px solid var(--lightBlue);
+  background-color: var(--cyanBlue) ;
+  border: 3px solid rgba(22,22,22,1);
 }
 .projectMain p{
   white-space:pre-wrap;
@@ -468,14 +562,16 @@ text-align: center;
 }
 .projectRight{
   flex:1;
-  height:100%;
+  height:396px;
+  max-width:290px;
+  position:relative;
 }
 .projectIcons{
   background-color:var(--blueTechs);
   height:50%;
   width:100%;
   margin-top:auto;
-
+  padding:5px 0;
 }
 .projectIcons h1{
   text-align: center;
@@ -486,9 +582,11 @@ text-align: center;
 .paragraph2{
   line-height: 1.7;
   letter-spacing: 1px;
+  margin:0;
+
 }
 .project h1{
-  font-size:1.8em;
+  font-size:1.4em;
   margin:5px;
 }
 
@@ -508,7 +606,26 @@ text-align: center;
   color:white;
 
 }
+@media (max-width: 1280px) {
 
+  .projectMain{
+    flex:100%;
+    width:100%;
+    display:none !important;
+  }
+  .projectLogo{
+    display:block;
+    width:85px;
+  }
+  .project{
+    height:auto;
+    width:100%;
+  }
+  .projectRight{
+    max-width:none;
+    height:500px;
+  }
+}
 .BtnComponent:hover{
   transform:scale(1.1);
   cursor:pointer;
@@ -529,6 +646,38 @@ text-align: center;
 text-align: center;
   margin-top:4px
 }
+.modal{
+  width:100vw;
+  background:rgba(1, 1, 1, 0.55)
+}
+.modal .projectModal{
+  color:black;
+  min-height:15px;
+
+}
+
+.modal-body{
+  height:50vh;
+  padding:0 !important;
+  overflow:auto !important;
+  border:2px solid white;
+
+}
+.modal-content{
+  min-height:40vh;
+}
+.modal-dialog{
+  max-width:90vw;
+}
+.modal-content, .modal-body, .projectModal{
+  /*max-height:100%;*/
+  /*overflow:hidden !important;*/
+}
+
+.projectModal .projectMain{
+ display:flex !important;
+}
+
 /* ======= Contact ========*/
 
 #contact{
@@ -549,13 +698,13 @@ text-align: center;
   min-height:500px;
   /*max-height:550px;*/
   background: rgba(54, 3, 154, 0.75);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.4 );
+ box-shadow: rgba(255,255,255, 1) 0px 0px 14px;
   backdrop-filter: blur( 5px );
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
   border: 3px solid var(--lightBlue);
   /*border: 1px solid rgba( 1, 255, 255, 0.18 );*/
-  padding:9px;
+  padding:  9px;
   font-size:1.1em;
 }
 @media (max-width: 768px) {
@@ -635,7 +784,7 @@ footer{
 footer h2{
   font-size:21px;
   letter-spacing:2px;
-  color:white !important;
+  color:#0c1f2d !important;
   display:inline;
   padding:11px;
   border-top: 1px solid white;

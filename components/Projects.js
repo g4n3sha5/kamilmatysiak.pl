@@ -10,8 +10,70 @@ import VAlogo from "../public/va-logo.png"
 import code from "../public/code.png"
 import web from "../public/web.png"
 import more from "../public/more.png"
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
+
+import React from "react";
+import {useRouter} from "next/router";
+import {useTranslation} from "next-i18next";
+
+
+const IconComponent = (Icon, index) => {
+    return (
+        <Icon aria-hidden="true" key={index} className="technology"/>
+    )
+
+}
+const BtnComponent = ({icon, href}) => {
+    return (
+        <a key={href} href={href} target="_blank" className="BtnComponent btn ">
+            <img src={icon.src}/>
+        </a>
+    )
+}
+const isMobile = () => {
+    if (typeof window !== "undefined") {
+        const breakpoint = '1280px'
+        const query = `(max-width : ${breakpoint})`
+        const matches = window.matchMedia(query).matches
+        return matches
+    }
+}
+
+const Modal = ({show, handleClick, img, descriptionKey, keyA}) => {
+    const {t} = useTranslation('index')
+    return (
+        <div className="modal " style={{display: show && isMobile() ? 'block' : 'none'}} tabIndex="-1" role="dialog"
+            // <div className="Modal" id=`modal${keyA}` tabIndex="-1" role="dialog"
+             aria-hidden="true">
+            <div className="modal-dialog modal-dialog-centered" role="document">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <button type="button" className="close" onClick={() => handleClick()} aria-label={t("Close")}>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div className="modal-body customScroll">
+                        <div className='projectModal  h-100'>
+                            <div className=' projectMain overflow-auto customScroll d-flex h-100'>
+                                <p className="p-3 paragraph2">
+                                    {
+                                        t(`${descriptionKey}`)
+                                    }
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary" onClick={() => handleClick()}> {t('Close')}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    )
+}
 
 
 const strToArr = (str) => {
@@ -29,33 +91,12 @@ const iconFinder = (list) => list.map(tech => {
             .icon
     }
 )
-const mativatedDescription = `Ten projekt dostarcza narzędzi dla ludzi, którzy kochają sport - szczególnie chwytane sztuki walki - Brazylijskie Jiu-Jitsu.
-Projekt zawiera wiele funkcjonalności i podzielony jest na kilka modułów:
-
-a) Kluby (Clubs)
-- Członkowie klubu (profile innych osób i menadżer uprawnień)
-- Harmonogram klubu (generator grafiku)
-- Treningi klubowe  
-- Lista klubów, każdy użytkownik może poprosić klub (uprawnionych członków)  o dołączenie do niego 
-
-b) BJJournal (Brazilian Jiu - Jitsu Journal)
-- Statystyki
-- Dodaj sesję treningową (zapisz typ sesji, długość, poznane techniki itp.)
-- Twoje sesje treningowe (lista wszystkich sesji, gdzie użytkownik może edytować lub usunąć każdą sesję)
-- Otwarta baza technik (gdzie każdy użytkownik może dodać technikę Jiu Jitsu (nazwa, typ itp.) oraz dodać Sugestie do innych technik)
-- Prosta aplikacja to do, gdzie użytkownik może dodać listę, oraz przedmioty do zrobienia w poszczególnych listach.
-
-c) Powiadomienia (Notifications)
-- Powiadamianie uprawnionych członków o wnioskach
-
-d) Konto / Profil (Account / Profile)
-- Zarządzaj kontem (zmień hasło / e-mail) i profilem (informacje osobiste (opcjonalnie) - avatar użytkownika, pas, bio etc.)`
 
 let projectsList = [
 
     {
-        name: "Kantor Krypto - strona",
-        description: "Statyczna strona dla mojego biznesu związanego z kryptowalutami",
+        name: "Crypto name",
+        descriptionKey: "Crypto Description",
         techs: strToArr("HTML, CSS, Bootstrap, JavaScript, Webstorm, Figma, Git, WordPress"),
         url: "https://www.kryptojarocin.pl/",
         repo: "https://github.com/g4n3sha5/Krypto-Jarocin",
@@ -65,7 +106,7 @@ let projectsList = [
     },
     {
         name: "MATIVATED",
-        description: mativatedDescription,
+        descriptionKey: "VA Description",
         techs: strToArr("HTML, CSS, Bootstrap, JavaScript, HTMX, Django, Python , Figma, PyCharm, JSON, Git"),
         url: "https://www.mativated.com/",
         repo: "https://github.com/g4n3sha5/MATIVATED_dev",
@@ -74,8 +115,8 @@ let projectsList = [
         logo: VAlogo
     },
     {
-        name: "Strona portfolio",
-        description: "Moja strona osobista :) Projekt tworzony w React / NextJS. ",
+        name: "Portfolio name",
+        descriptionKey: "Portfolio Description",
         techs: strToArr("HTML, CSS, React, NextJS, Bootstrap, JavaScript, Webstorm, Figma, Git"),
         url: "https://www.kamilmatysiak.pl/",
         repo: "https://github.com/g4n3sha5/kamilmatysiak.pl",
@@ -89,84 +130,95 @@ let projectsList = [
 })
 
 
-const IconComponent = (Icon, index) => {
+const ProjectComponent = (props) => {
+
+    let [show, setShow] = useState(false)
+    const status = [show, setShow]
+    let [mobileStatus, setMobileStatus] = useState(isMobile)
+    const {name, descriptionKey, url, repo, icons, keyA, img, logo} = props
+
+    useEffect(() => {
+        let listener = () => setMobileStatus(isMobile)
+        window.addEventListener('resize', listener);
+        return () => window.removeEventListener('resize', listener);
+    }, [mobileStatus]);
+
+    const handleClick = () => {
+        return setShow(!show)
+    }
+
+    const {t} = useTranslation('index')
+
+    let condition = show ? 'activeIcon' : ''
+
+
     return (
-        <Icon key={index} className="technology"/>
-    )
+        <React.Fragment key={"key" + keyA}>
+            <article key={keyA} className='project '>
 
-}
-const BtnComponent = ({icon, href}) => {
-    return (
-        <a key={href} href={href} target="_blank" className="BtnComponent btn ">
-            <img src={icon.src}/>
-        </a>
-    )
-}
+                <div className={`${show ? 'showProject' : ''} projectMain overflow-auto customScroll d-flex `}>
 
-const ProjectComponent = ({name, description: desc, url, repo, icons, keyA, img, logo}) => {
+                    {
+                        !show ?
+                            <img alt="Project image" src={img.src}/> :
+                            <p className="p-3 paragraph2">
 
+                                {
+                                    t(`${descriptionKey}`)
+                                }
 
-
-    let [show, setShow] = useState(true)
-    let condition = !show ? 'activeIcon' : ''
-    return (
-
-        <article key={keyA} className="project ">
-            <div className={`${show ? 'showProject' : ''} projectMain overflow-auto customScroll d-flex `}>
-
-                {
-
-                    show ?
-                        <img src={img.src}/> :
-                    <p className="p-3 paragraph2">
-                        {desc}
-
-                    </p>
-                }
-            </div>
-
-            <div className="projectRight d-flex flex-column pt-3 align-items-center
-              ">
-                <img className="projectLogo" src={logo.src}/>
-                <h1 className="text-center">{name}</h1>
-                <div className="projectOverlay d-flex justify-content-center my-3 px-3">
-
-                    <button  onClick={() => setShow(!show)} className={`BtnComponent btn ${condition}`}>
-                        <img  src={more.src}/>
-                    </button>
-                    <BtnComponent icon={web} href={url}/>
-                    <BtnComponent icon={code} href={repo}/>
+                            </p>
+                    }
                 </div>
-                <div className="projectIcons  px-1 pt-2">
-                    <h1>Technologie</h1>
-                    <div className=" d-flex flex-wrap justify-content-center
+
+                <div key={'modal' + keyA} className='projectRight d-flex flex-column  pt-3 align-items-center'>
+                    <div className="d-flex flex-column align-items-center justify-content-center h-100">
+
+                        <img aria-hidden="true" alt="Logo of project" className="projectLogo" src={logo.src}/>
+                        <h1 className="text-center">{t(`${name}`)}</h1>
+
+                        <div className="d-flex justify-content-center my-3 px-3 pb-1">
+                            <button onClick={() => handleClick()}
+                                    className={`BtnComponent btn ${condition}`}>
+                                <img src={more.src}/>
+                            </button>
+                            <BtnComponent icon={web} href={url}/>
+                            <BtnComponent icon={code} href={repo}/>
+                        </div>
+
+                    </div>
+                    <div className="projectIcons  px-1">
+                        <h1>{t("Technologies")}</h1>
+                        <div className=" d-flex flex-wrap justify-content-center
              align-items-center py-2 px-5 px-lg-1 mt-1">
 
-                        {
-                            icons.map(IconComponent)
-                        }
+                            {
+                                icons.map(IconComponent)
+                            }
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
-        </article>
+            </article>
+            <Modal {...props} show={show} handleClick={handleClick}/>
+        </React.Fragment>
     )
 }
 
 const Projects = () => {
+
+    const {locale} = useRouter()
+    const {t} = useTranslation('index')
     return (
         <section id="projects">
-            <div className="container ">
+            <div className="container  px-5 ">
                 <article>
-                    <h1 className="header1">Projekty</h1>
-                    <p>
+                    <h1 className="header1">{t("Projects")}</h1>
 
-                        Pierwsze projekty w JavaScript i&nbsp;Pythonie
-                        (to-do, proste gry, kółko i&nbsp;krzyżyk, wizytówka itp.). Były to projekty hobbistycznie
-                        tworzone w latach 2019/2020,
-                        stąd większość tych projektów przepadła w&nbsp;czeluściach dysków. Moje najważniejsze projekty
-                        to:
+                    <p>
+                        {t("Projects Description")}
+
                     </p>
                     {
                         <div className="projects d-flex flex-column align-items-center py-5 gy-4">

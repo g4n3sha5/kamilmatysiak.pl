@@ -1,10 +1,12 @@
 import '@/styles/globals.css'
 import Head from 'next/head'
-export default function App({Component, pageProps}) {
+import {appWithTranslation} from 'next-i18next';
+
+const App = ({Component, pageProps}) =>{
     return (<>
         <Head>
             <meta charSet="utf-8"/>
-            <title>Kamil Matysiak | Junior Frontend Developer</title>
+            <title>Kamil Matysiak | Junior Web Developer</title>
             <link rel="icon" href="/buddha.png"/>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
@@ -20,3 +22,6 @@ export default function App({Component, pageProps}) {
 
     </>)
 }
+
+// export default App /**/
+export default appWithTranslation(App)

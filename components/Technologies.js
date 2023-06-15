@@ -18,6 +18,8 @@ import WordPress from "../public/techs/WordPress.svg";
 import Photoshop from "../public/techs/Photoshop.svg";
 import Slack from "../public/techs/Slack.svg";
 import Docker from "../public/techs/Docker.svg";
+import {useRouter} from "next/router";
+import {useTranslation} from "next-i18next";
 
 const langs = [
     {name: "HTML", icon: HTML},
@@ -46,9 +48,9 @@ const tools = [
 export const techsArr = [...langs, ...tools]
 
 
-const techComponents = (Tech) => {
+const techComponent = (Tech) => {
     return (
-        <div key={Tech.name} className="techWrapper rajdhani">
+        <div key={Tech.name}  aria-hidden="true" className="techWrapper rajdhani">
             <h6>{Tech.name}</h6>
             <Tech.icon className="techIcon"/>
         </div>
@@ -58,37 +60,35 @@ const techComponents = (Tech) => {
 const TechDiv = ({arr}) => {
     return (
         <div className="technologies pb-lg-3 mt-lg-2 my-3 px-lg-3">
-            {arr.map(techComponents)}
+            {arr.map(techComponent)}
         </div>
     );
 };
 
 const Technologies = () => {
+
+    const {locale} = useRouter()
+    const {t } = useTranslation('index')
     return (
         <section id="technologies">
-            <div className="container-fluid px-lg-4  overflow-hidden">
+            <div className="container px-lg-4  overflow-hidden">
                 <article className="mb-5">
-                    <h1 className="header1">Technologie</h1>
+                    <h1 className="header1">{t("Technologies")}</h1>
                     <p>
-                        W swoim życiu korzystałem w wielu rodzajów oprogramowania, w
-                        zależności od wykonywanej pracy, stąd poznałem różne aplikacje,
-                        systemy ERP, czy platformy wewenętrzne firm. Dzięki temu obeznanie z
-                        nowymi technologiami i systemami przychodzi mi szybko. Uważam, że najprostsze rozwiązania są
-                        najlepsze.
+                        {t("Technologies Description")}
                     </p>
                 </article>
                 <article>
 
 
                     <h2>
-                        W swojej pracy dotychczas wykorzystywałem następujące języki i
-                        biblioteki:
+                        {t("Languages")}
                     </h2>
                     <TechDiv arr={langs}/>
                 </article>
 
                 <article>
-                    <h2>A także następujące narzędzia:</h2>
+                    <h2>{t("Tools")}</h2>
                     <TechDiv arr={tools}/>
                 </article>
             </div>
