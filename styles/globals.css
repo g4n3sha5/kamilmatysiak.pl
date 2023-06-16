@@ -165,7 +165,7 @@ h3{
 }
 .custom-shape-divider-bottom-1682337666 {
   position: absolute;
-  bottom: 0;
+  bottom: -3px;
   left: 0;
   width: 100%;
 
@@ -604,7 +604,7 @@ text-align: center;
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
   color:white;
-
+  max-height:150px;
 }
 @media (max-width: 1280px) {
 
@@ -788,4 +788,58 @@ footer h2{
   display:inline;
   padding:11px;
   border-top: 1px solid white;
+}
+/*BIG SCREENS*/
+@media (min-width: 2100px) {
+  body{
+    font-size:1.1vw !important;
+  }
+  .heroSquare{
+    max-width:760px;
+  }
+  .heroSquare h1{
+    font-size:1.4vw;
+  }
+  .heroSquare .btn{
+    font-size:1.1vw;
+    width:28%;
+    height:auto;
+  }
+  h2{
+    font-size:1.2vw;
+  }
+  .header1{
+    font-size:3vw !important;
+    /*max-width:15vw;*/
+    /*width:auto;*/
+  }
+  .paragraph1{
+    font-size:1.5vw !important;
+  }
+  .possible{
+    font-size:1.7vw;
+  }
+
+  .btn{
+    font-size:1.3vw;
+  }
+  .container{
+    width:65vw !important;
+    max-width:none;
+  }
+  .aboutCard img {
+    width: 900px;
+    height: 600px;
+  }
+  .project h1{
+    font-size:0.8vw;
+  }
+  .projectMain {
+
+    width: 1200px;
+    height: 496px;
+  }
+  .projectRight{
+    height:496px;
+  }
 }
