@@ -18,10 +18,10 @@ const Hero = () => {
         <section id="Hero">
             <div className="container-fluid w-100  position-relative ">
                 <div style={{backgroundImage: `url(${temple.src})`}} className=" heroImg row h-100 overflow-hidden">
-                    <div className=" col-xl-6 col-md-7 navPadding col-12 position-relative d-flex
+                    <div className=" col-xl-6 col-md-7 navPadding  col-12 position-relative d-flex
                          justify-content-center align-items-center m-0 px-1 p-xl-3 overflow-hidden">
-                        <div className="heroSquare mt-3 rajdhani position-relative d-flex flex-column
-                      py-3">
+                        <div className="heroSquare mt-5 mt-lg-0 rajdhani position-relative d-flex flex-column
+                      py-3 slideInLeft">
                             <h1>
                                 {t("My name is")}
                                 <span className="font-700"> Kamil Matysiak</span>
@@ -50,7 +50,7 @@ const Hero = () => {
                     </div>
                     <div
                         className="col-xl-6 col-md-5 col-12  d-flex align-items-center
-                        justify-content-center rightColumnHero pr-5 ">
+                        justify-content-center rightColumnHero pr-5  slideInRight">
 
 
                         <Developer1 width="550px" height="450px"/>

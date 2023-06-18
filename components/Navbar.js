@@ -94,8 +94,8 @@ const Navbar = () => {
         <header
             className={
                 scrolled
-                    ? `scrolled${scrolled} navigation fixed-top navbar-dark rajdhani my-0 py-0 navbar-expand-xl`
-                    : "navigation fixed-top navbar-dark rajdhani my-0 py-0  navbar-expand-xl"
+                    ? `scrolled${scrolled} navigation fixed-top navbar-dark rajdhani my-0 py-0 navbar-expand-xl slideInTop`
+                    : "navigation fixed-top navbar-dark rajdhani my-0 py-0  navbar-expand-xl slideInTop"
             }
         >
             <nav className="  h-100 p-0 navbar  py-lg-0">

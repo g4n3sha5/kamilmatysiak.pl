@@ -44,7 +44,7 @@ const Contact = () => {
         <section id="contact">
             <div className="container-fluid p-lg-5 d-flex justify-content-center">
                 <div className="row pb-3 w-100">
-                    <div className="col-12 col-lg-5 mb-3 pr-5">
+                    <div className="col-12 col-lg-5 mb-3 pr-xl-5">
 
                         <h1 className="header1"> {t("Contact")} </h1>
                         <p>{t("Interested")}</p>
@@ -65,7 +65,7 @@ const Contact = () => {
                             <h6>Art by <Link href="https://dribbble.com/Pro_Art"> Andrey Prokopenko </Link></h6>
                         </div>
                     </div>
-                    <div className="col-12 col-lg-7 d-flex justify-content-center align-items-start ">
+                    <div className="col-12 col-lg-7 d-flex justify-content-center align-items-start px-0 px-lg-2 ">
                         <div className="contactForm py-3 px-4 mt-4">
                             <form onSubmit={handleSubmit} className=" rajdhani px-2 d-flex flex-column">
                                 <label htmlFor="email">

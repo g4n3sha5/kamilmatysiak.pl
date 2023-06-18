@@ -19,7 +19,6 @@ section{
 
 :root {
   --navHeight: 78px;
-
   --navPrimary: rgba(63, 55, 201, 0.98);
   /*--navPrimary: #3f37c9;*/
   --paleblue: #4361ee;
@@ -124,6 +123,46 @@ h3{
   font-family: "Rajdhani", sans-serif !important;
 }
 
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  70%{
+    transform: translateX(3%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+
+    transform: translateY(0);
+  }
+}
+
+.slideInLeft {
+  animation: 0.5s ease-out 0s 1 slideInLeft;
+}
+.slideInRight{
+  animation: 0.4s ease-out 0s 1 slideInRight;
+}
+.slideInTop{
+  animation: 0.45s ease 0s 1 slideInTop;
+}
 .heroSquare {
   z-index: 5;
   padding: 15px 30px;
@@ -135,6 +174,8 @@ h3{
   color: ghostwhite;
   min-height: 380px;
   width: 74%;
+
+
   overflow: hidden;
   box-shadow: 0 0 25px 0 rgba( 255, 255, 255, 0.86);
 }
@@ -165,7 +206,7 @@ h3{
 }
 .custom-shape-divider-bottom-1682337666 {
   position: absolute;
-  bottom: -3px;
+  bottom:0;
   left: 0;
   width: 100%;
 
@@ -173,7 +214,11 @@ h3{
   line-height: 0;
   transform: rotate(180deg);
 }
+#contact .custom-shape-divider-bottom-1682337666 {
+  position: absolute;
+  bottom:-3px;
 
+}
 .custom-shape-divider-bottom-1682337666 svg {
   position: relative;
   display: block;
@@ -655,7 +700,9 @@ text-align: center;
   min-height:15px;
 
 }
-
+.projectModal .paragraph2{
+  background:var(--blueDarker);
+}
 .modal-body{
   height:50vh;
   padding:0 !important;
@@ -665,13 +712,12 @@ text-align: center;
 }
 .modal-content{
   min-height:40vh;
+  border:1px solid white;
 }
-.modal-dialog{
+
+.modal-content{
   max-width:90vw;
-}
-.modal-content, .modal-body, .projectModal{
-  /*max-height:100%;*/
-  /*overflow:hidden !important;*/
+
 }
 
 .projectModal .projectMain{
@@ -743,10 +789,10 @@ margin-bottom:15px;
 }
 
 #contact form input[type=email]{
-  width:40%;
+ max-width:270px;
 }
 #contact form input[type=text]{
-  width:65%;
+  max-width:450px;
 }
 #contact form textarea{
   min-height:115px;

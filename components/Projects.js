@@ -46,7 +46,7 @@ const Modal = ({show, handleClick, img, descriptionKey, keyA}) => {
         <div className="modal " style={{display: show && isMobile() ? 'block' : 'none'}} tabIndex="-1" role="dialog"
             // <div className="Modal" id=`modal${keyA}` tabIndex="-1" role="dialog"
              aria-hidden="true">
-            <div className="modal-dialog modal-dialog-centered" role="document">
+            <div className="modal-dialog d-flex w-100 justify-content-center modal-dialog-centered m-0" role="document">
                 <div className="modal-content">
                     <div className="modal-header">
                         <button type="button" className="close" onClick={() => handleClick()} aria-label={t("Close")}>
@@ -212,7 +212,7 @@ const Projects = () => {
     const {t} = useTranslation('index')
     return (
         <section id="projects">
-            <div className="container  px-5 ">
+            <div className="container  px-lg-5 ">
                 <article>
                     <h1 className="header1">{t("Projects")}</h1>
 
