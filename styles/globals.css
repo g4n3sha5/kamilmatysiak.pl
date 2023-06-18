@@ -320,11 +320,10 @@ header {
   z-index:55;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 370px) {
   .navbar-brand img {
     width: 150px;
     height: 31px;
-
     z-index:55;
   }
 }
@@ -700,9 +699,7 @@ text-align: center;
   min-height:15px;
 
 }
-.projectModal .paragraph2{
-  background:var(--blueDarker);
-}
+
 .modal-body{
   height:50vh;
   padding:0 !important;
@@ -721,6 +718,9 @@ text-align: center;
 }
 
 .projectModal .projectMain{
+
+  background:var(--blueDarker);
+
  display:flex !important;
 }
 

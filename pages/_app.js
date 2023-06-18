@@ -6,7 +6,7 @@ const App = ({Component, pageProps}) =>{
     return (<>
         <Head>
             <meta charSet="utf-8"/>
-            <title>Kamil Matysiak | Junior Web Developer</title>
+            <title>Kamil Matysiak | Web Developer</title>
             <link rel="icon" href="/buddha.png"/>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
