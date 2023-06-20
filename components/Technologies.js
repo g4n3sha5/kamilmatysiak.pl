@@ -6,6 +6,7 @@ import NextJS from "../public/techs/NextJS.svg";
 import Bootstrap from "../public/techs/Bootstrap.svg";
 import Python from "../public/techs/Python.svg";
 import Django from "../public/techs/Django.svg";
+import SQL from "../public/techs/SQL.svg";
 import HTMX from "../public/techs/HTMX.svg";
 import Postman from "../public/techs/Postman.svg";
 import Figma from "../public/techs/Figma.svg";
@@ -30,6 +31,7 @@ const langs = [
     {name: "Bootstrap", icon: Bootstrap},
     {name: "Python", icon: Python},
     {name: "Django", icon: Django},
+    {name: "SQL", icon: SQL}
 ];
 const tools = [
     {name: "HTMX", icon: HTMX},

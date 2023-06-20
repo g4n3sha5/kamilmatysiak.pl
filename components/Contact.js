@@ -81,7 +81,7 @@ const Contact = () => {
                                 </label>
                                 <textarea name="message" required/>
                                 <div className="pt-1">
-                                    <h2 className={messageStatus ? "d-block" : "d-none"}>{t("    sent")}!</h2>
+                                    <h2 className={messageStatus ? "d-block" : "d-none"}>{t("Message sent")}!</h2>
                                 </div>
                                 <button type="submit" className="btn btn-primary mt-4 w-50 mx-2">
                                     {t("Send")}

@@ -127,12 +127,20 @@ h3{
 @keyframes slideInLeft {
   0% {
     transform: translateX(-100%);
+    opacity: 0;
   }
-  70%{
+  72%{
     transform: translateX(3%);
+    opacity:0.25;
   }
+  78%{
+     transform: translateX(0);
+    opacity:0.4;
+  }
+
   100% {
-    transform: translateX(0);
+
+    opacity:1;
   }
 }
 @keyframes slideInRight {
@@ -155,14 +163,25 @@ h3{
 }
 
 .slideInLeft {
-  animation: 0.5s ease-out 0s 1 slideInLeft;
+  animation: 1s ease-in 1 slideInLeft;
 }
 .slideInRight{
-  animation: 0.4s ease-out 0s 1 slideInRight;
+  animation: 1s ease-out 1 slideInRight;
 }
-.slideInTop{
-  animation: 0.45s ease 0s 1 slideInTop;
+.slideInTop {
+  animation: 1s ease 1 slideInTop;
 }
+
+
+/*.slideInLeft {*/
+/*  animation: 0.5s ease-out 0s 1 slideInLeft;*/
+/*}*/
+/*.slideInRight{*/
+/*  animation: 0.4s ease-out 0s 1 slideInRight;*/
+/*}*/
+/*.slideInTop{*/
+/*  animation: 0.45s ease 0s 1 slideInTop;*/
+/*}*/
 .heroSquare {
   z-index: 5;
   padding: 15px 30px;
