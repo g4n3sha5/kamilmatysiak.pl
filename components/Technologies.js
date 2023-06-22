@@ -25,6 +25,7 @@ import {useTranslation} from "next-i18next";
 const langs = [
     {name: "HTML", icon: HTML},
     {name: "CSS", icon: CSS},
+    {name: "HTMX", icon: HTMX},
     {name: "JavaScript", icon: JavaScript},
     {name: "React", icon: iReact},
     {name: "NextJS", icon: NextJS},
@@ -34,7 +35,6 @@ const langs = [
     {name: "SQL", icon: SQL}
 ];
 const tools = [
-    {name: "HTMX", icon: HTMX},
     {name: "Git", icon: Git},
     {name: "Jira", icon: Jira},
     {name: "Postman", icon: Postman},
