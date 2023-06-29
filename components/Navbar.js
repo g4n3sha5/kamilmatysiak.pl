@@ -99,12 +99,12 @@ const Navbar = () => {
             }
         >
             <nav className="  h-100 p-0 navbar  py-lg-0">
-                <a
+                <Link
                     className="navbar-brand  m-0 p-0 h-100 d-flex align-items-center "
-                    href="/pages"
+                    href="/"
                 >
                     <img src="/logo.png" alt="logo"/>
-                </a>
+                </Link>
                 <button
                     className="navbar-toggler mr-3"
                     type="button"

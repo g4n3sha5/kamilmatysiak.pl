@@ -26,7 +26,6 @@ export async function getStaticProps({locale}) {
 export default function Home() {
     return (
         <>
-            {/*<Head/>*/}
             <main>
                 <Navbar/>
                 <Hero/>
