@@ -104,7 +104,7 @@ section .container{
 .heroImg {
   /*background-position: 30% 50%;*/
   background-position: 65% 44%;
-
+  background-attachment: fixed;
 }
 
 .heroImg:before{
@@ -366,7 +366,8 @@ header {
 }
 
 .scrolled1 {
-  background-color: var(--paleblue) !important;
+  background-color: var(--blueDarker) !important;
+  border-bottom: 1px solid var(--blueTechs);
 }
 .scrolled2 {
   background-color: var(--blueDarker) !important;

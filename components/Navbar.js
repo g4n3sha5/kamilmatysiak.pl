@@ -119,7 +119,7 @@ const Navbar = () => {
                 <div ref={navRef}
                      className={
                          scrolled
-                             ? `scrolled${scrolled}  navbar-collapse d-xl-flex 
+                             ? `scrolledCollapse${scrolled}  navbar-collapse d-xl-flex 
                         justify-content-center text-center justify-content-xl-end px-lg-4 p-1 `
                              : "navbar-collapse d-xl-flex justify-content-center text-center  justify-content-xl-end px-lg-4 p-1 "}
                      id="navigation"
