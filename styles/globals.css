@@ -296,6 +296,8 @@ h3{
 .App {
   overflow: hidden;
 }
+
+/* ====== NAVBAR ====== */
 header {
   height: var(--navHeight);
   font-size: 25px;

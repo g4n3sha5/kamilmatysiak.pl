@@ -59,7 +59,6 @@ const Navbar = () => {
     const navRef = useRef()
 
     const showNavbar = () => {
-
         navRef.current.classList.toggle('navShow')
 
     }
@@ -76,9 +75,6 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(0);
 
     useEffect(() => {
-        // let yof = window.pageYOffset;
-        // let elDistanceToTop = el.getBoundingClientRect().top;
-
         const onScroll = () => {
             if (window.scrollY < 150) {
                 setScrolled(0);
@@ -99,12 +95,14 @@ const Navbar = () => {
             }
         >
             <nav className="  h-100 p-0 navbar  py-lg-0">
+
                 <Link
                     className="navbar-brand  m-0 p-0 h-100 d-flex align-items-center "
                     href="/"
                 >
                     <img src="/logo.png" alt="logo"/>
                 </Link>
+
                 <button
                     className="navbar-toggler mr-3"
                     type="button"

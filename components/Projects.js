@@ -2,10 +2,14 @@ import {techsArr} from "./Technologies.js"
 import mativated from "../public/mativated.webp";
 import kryptokantor from "../public/kryptojarocin.webp"
 import portfolio from "../public/portfolio.webp"
+import auratek from "../public/auratek.webp"
+
 
 import potrfoliologo from "../public/buddha.png"
 import kantorlogo from "../public/kantor-logo.webp"
 import VAlogo from "../public/va-logo.png"
+import aurateklogo from "../public/aurateklogo.png"
+
 
 import code from "../public/code.png"
 import web from "../public/web.png"
@@ -43,10 +47,10 @@ const isMobile = () => {
 const Modal = ({show, handleClick, img, descriptionKey, keyA}) => {
     const {t} = useTranslation('index')
     return (
-        <div className="modal " style={{display: show && isMobile() ? 'block' : 'none'}} tabIndex="-1" role="dialog"
+        <div className="modal " style={{display: show && isMobile() ? 'flex' : 'none'}} tabIndex="-1" role="dialog"
             // <div className="Modal" id=`modal${keyA}` tabIndex="-1" role="dialog"
              aria-hidden="true">
-            <div className="modal-dialog d-flex w-100 justify-content-center modal-dialog-centered m-0" role="document">
+            <div className=" d-flex w-100 justify-content-center modal-dialog-centered m-0" role="document">
                 <div className="modal-content">
                     <div className="modal-header">
                         <button type="button" className="close" onClick={() => handleClick()} aria-label={t("Close")}>
@@ -93,26 +97,15 @@ const iconFinder = (list) => list.map(tech => {
 )
 
 let projectsList = [
-
     {
-        name: "Crypto name",
-        descriptionKey: "Crypto Description",
-        techs: strToArr("HTML, CSS, Bootstrap, JavaScript, Webstorm, Figma, Git, WordPress"),
-        url: "https://www.kryptojarocin.pl/",
-        repo: "https://github.com/g4n3sha5/Krypto-Jarocin",
-        keyA: "kantor",
-        img: kryptokantor,
-        logo: kantorlogo
-    },
-    {
-        name: "MATIVATED",
-        descriptionKey: "VA Description",
-        techs: strToArr("HTML, CSS, Bootstrap, JavaScript, HTMX, Django, Python , Figma, PyCharm, JSON, Git"),
-        url: "https://www.mativated.com/",
-        repo: "https://github.com/g4n3sha5/MATIVATED_dev",
-        keyA: "mativated",
-        img: mativated,
-        logo: VAlogo
+        name: "Auratek",
+        descriptionKey: "Auratek description",
+        techs: strToArr("HTML, CSS, React, NextJS, Bootstrap, JavaScript, Webstorm, Figma, Git"),
+        url: "https://auratek.vercel.app/",
+        repo: "https://github.com/g4n3sha5/Auratek",
+        keyA: "auratek",
+        img: auratek,
+        logo: aurateklogo
     },
     {
         name: "Portfolio name",
@@ -123,7 +116,30 @@ let projectsList = [
         keyA: "portfolio",
         img: portfolio,
         logo: potrfoliologo
+    },
+
+    {
+        name: "MATIVATED",
+        descriptionKey: "VA Description",
+        techs: strToArr("HTML, CSS, Bootstrap, JavaScript, HTMX, Django, Python , Figma, PyCharm, JSON, Git"),
+        url: "https://www.mativated.com/",
+        repo: "https://github.com/g4n3sha5/MATIVATED_dev",
+        keyA: "mativated",
+        img: mativated,
+        logo: VAlogo
+    },
+
+    {
+        name: "Crypto name",
+        descriptionKey: "Crypto Description",
+        techs: strToArr("HTML, CSS, Bootstrap, JavaScript, Webstorm, Figma, Git, WordPress"),
+        url: "https://www.kryptojarocin.pl/",
+        repo: "https://github.com/g4n3sha5/Krypto-Jarocin",
+        keyA: "kantor",
+        img: kryptokantor,
+        logo: kantorlogo
     }
+
 ].map(obj => {
     obj.icons = iconFinder(obj.techs)
     return obj
@@ -137,7 +153,7 @@ const ProjectComponent = (props) => {
     let [mobileStatus, setMobileStatus] = useState(isMobile)
     const {name, descriptionKey, url, repo, icons, keyA, img, logo} = props
 
-    useEffect(() => {
+        useEffect(() => {
         let listener = () => setMobileStatus(isMobile)
         window.addEventListener('resize', listener);
         return () => window.removeEventListener('resize', listener);
