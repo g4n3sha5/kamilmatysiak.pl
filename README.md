@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/g4n3sha5/kamilmatysiak.pl">
-    <img src="public/img/buddha.png" alt="Logo" width="80" height="80">
+    <img src="public/buddha.png" alt="Logo" width="80" height="80">
   </a>
 
   
