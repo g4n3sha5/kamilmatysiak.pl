@@ -1,6 +1,6 @@
 // import React from "react";
-import {useState, useEffect, useRef} from "react";
-import Link from 'next/link';
+import {useEffect, useRef, useState} from "react";
+import Link from "next/link";
 import {useTranslation} from "next-i18next";
 import {useRouter} from "next/router";
 
@@ -22,9 +22,7 @@ const LangComponent = ({lang, status}) => {
                 <img alt="flag icon" src={lang + 'flag.png'}/>
             </div>
         )
-    }
-
-    else if (status === 'secondLang') {
+    } else if (status === 'secondLang') {
         return (
             <div key={lang} className={`${status} fitImg flagIMG`}>
                 <Link href={'/'} locale={lang}>
@@ -72,6 +70,7 @@ const Navbar = () => {
         {name: t(`${"Projects"}`), href: "#projects"},
         {name: t(`${"Contact"}`), href: "#contact"},
     ]
+
     const [scrolled, setScrolled] = useState(0);
 
     useEffect(() => {
@@ -124,7 +123,7 @@ const Navbar = () => {
                 >
                     <ul className="navbar-nav pt-3 pt-xl-0 px-2 d-flex justify-content-center mb-5 mb-xl-0 ">
                         {
-                            NAV_ITEMS.map(NavItem)
+                            NAV_ITEMS.map((navItem) => <NavItem {...navItem}/>)
 
                         }
 

@@ -12,9 +12,7 @@ import aurateklogo from "../public/aurateklogo.png";
 import code from "../public/code.png";
 import web from "../public/web.png";
 import more from "../public/more.png";
-import { useEffect, useState } from "react";
-
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 
@@ -246,7 +244,9 @@ const Projects = () => {
           <p>{t("Projects Description")}</p>
           {
             <div className="projects d-flex flex-column justify-content-center align-items-center py-5 gy-4">
-              {projectsList.map(ProjectComponent)}
+              {projectsList.map((project) => (
+                <ProjectComponent {...project} />
+              ))}
             </div>
           }
         </article>

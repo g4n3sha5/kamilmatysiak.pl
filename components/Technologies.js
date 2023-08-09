@@ -50,7 +50,7 @@ const tools = [
 export const techsArr = [...langs, ...tools]
 
 
-const techComponent = (Tech) => {
+const TechComponent = (Tech) => {
     return (
         <div key={Tech.name}  aria-hidden="true" className="techWrapper rajdhani">
             <h6>{Tech.name}</h6>
@@ -62,7 +62,7 @@ const techComponent = (Tech) => {
 const TechDiv = ({arr}) => {
     return (
         <div className="technologies pb-lg-3 mt-lg-2 my-3 px-lg-3">
-            {arr.map(techComponent)}
+            {arr.map((elem) => <TechComponent {...elem}/>)}
         </div>
     );
 };
@@ -72,29 +72,23 @@ const Technologies = () => {
     const {locale} = useRouter()
     const {t } = useTranslation('index')
     return (
-        <section id="technologies">
-            <div className="container px-lg-4  overflow-hidden">
-                <article className="mb-5">
-                    <h1 className="header1">{t("Technologies")}</h1>
-                    <p>
-                        {t("Technologies Description")}
-                    </p>
-                </article>
-                <article>
+      <section id="technologies">
+        <div className="container px-lg-4  overflow-hidden">
+          <article className="mb-5">
+            <h1 className="header1">{t("Technologies")}</h1>
+            <p>{t("Technologies Description")}</p>
+          </article>
+          <article>
+            <h2>{t("Languages")}</h2>
+            <TechDiv arr={langs} />
+          </article>
 
-
-                    <h2>
-                        {t("Languages")}
-                    </h2>
-                    <TechDiv arr={langs}/>
-                </article>
-
-                <article>
-                    <h2>{t("Tools")}</h2>
-                    <TechDiv arr={tools}/>
-                </article>
-            </div>
-        </section>
+          <article>
+            <h2>{t("Tools")}</h2>
+            <TechDiv arr={tools} />
+          </article>
+        </div>
+      </section>
     );
 }
 
