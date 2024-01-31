@@ -10,14 +10,15 @@ export const Contact = () => {
   const [messageStatus, setMessageStatus] = useState(false);
   const { t } = useTranslation("index");
 
-  async function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
+  async function handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
 
     try {
       const response = await fetch("api/contact", {
         method: "post",
-        body: new URLSearchParams(data),
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        body: new URLSearchParams(data as any),
       });
 
       if (!response.ok) {
