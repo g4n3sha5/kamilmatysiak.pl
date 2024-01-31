@@ -11,7 +11,7 @@ export const Hero = () => {
   const { t } = useTranslation("index");
 
   return (
-    <section id="Hero">
+    <section id="hero">
       <div className="container-fluid w-100  position-relative ">
         <div
           style={{ backgroundImage: `url(${temple.src})` }}
@@ -31,7 +31,7 @@ export const Hero = () => {
               </h1>
               <h2>{t("I am")}</h2>
 
-              <div className="mt-4 socialIcons  px-2">
+              <div className="mt-4 socialIcons px-2">
                 <a href="https://github.com/g4n3sha5">
                   <Github width="48px" height="48px" fill="white" />
                 </a>

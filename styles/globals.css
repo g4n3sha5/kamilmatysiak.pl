@@ -7,7 +7,7 @@ body {
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background-color: var(--paleBlack);
+  background-color: var(--blackFooter);
   font-size: 16px;
 }
 
@@ -48,18 +48,18 @@ section {
 :root {
   --navHeight: 78px;
   --navPrimary: rgba(63, 55, 201, 0.98);
-  --paleblue: #4361ee;
-  --lightBlue: #1bd8fb;
-  --cyanBlue: #4ccaf0;
-  --blueDarker: #2e2686;
-  --blueTechs: #3b10d3;
-  --paleBlack: #191919;
-  --heroBlue: #3f37c9;
-  --pinkBlue: #5f0cbd;
-  --purpleBlue: #2016c1;
-  --projectsBlue: #1f075b;
-  --contactBlue: var(--paleBlack);
-  --footerBlue: #00b4d8;
+  --paleBlue: #4361ee;
+  --blueLight: #1bd8fb;
+  --blueCyan: #4ccaf0;
+  --blueAbout: #2e2686;
+  --blueTools: #3b10d3;
+  --blackFooter: #191919;
+  --blueHero: #3f37c9;
+  --bluePink: #5f0cbd;
+  --bluePurple: #2016c1;
+  --blueProjects: #1f075b;
+  --blueContact: var(--blackFooter);
+  --blueFooter: #00b4d8;
   --heightNoNav: calc(100vh - var(--navHeight));
 }
 
@@ -99,14 +99,14 @@ section .container {
   font-weight: 700;
 }
 
-#Hero {
+#hero {
   min-height: 100vh;
   position: relative;
   display: flex;
 }
 
 @media (max-width: 768px) {
-  #Hero {
+  #hero {
     height: 150vh;
   }
 
@@ -199,7 +199,7 @@ h3 {
 .heroSquare {
   z-index: 5;
   padding: 15px 30px;
-  background-color: var(--heroBlue);
+  background-color: var(--blueHero);
   border: 2px solid white;
   border-radius: 12px;
   color: ghostwhite;
@@ -231,36 +231,43 @@ h3 {
   margin: 2px 4px;
 }
 
-.custom-shape-divider-bottom-1682337666 {
+.wave {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
 }
 
-#contact .custom-shape-divider-bottom-1682337666 {
+#contact .wave {
   position: absolute;
   bottom: -3px;
 }
 
-.custom-shape-divider-bottom-1682337666 svg {
+.wave svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
   height: 59px;
 }
 
-.custom-shape-divider-bottom-1682337666 .shape-fill {
-  fill: var(--blueDarker);
-  /*fill: #ffffff;*/
+#hero .wave .shape-fill {
+  fill: var(--blueAbout);
+}
+#about .wave .shape-fill {
+  fill: var(--blueTools);
+}
+#tools .wave .shape-fill {
+  fill: var(--blueProjects);
+}
+#projects .wave .shape-fill {
+  fill: var(--blackFooter);
 }
 
 .socialIcons a:hover svg {
-  fill: var(--paleBlack);
+  fill: var(--blackFooter);
   transform: scale(1.08);
 }
 
@@ -276,7 +283,7 @@ h3 {
 .heroSquare .btn {
   font-size: 1.5rem;
   width: 140px;
-  background-color: var(--lightBlue);
+  background-color: var(--blueLight);
   color: black;
   font-weight: 600;
   border-radius: 9px;
@@ -287,7 +294,7 @@ h3 {
   scale: 102%;
 }
 
-#Hero h1 {
+#hero h1 {
   margin: 0;
 }
 
@@ -379,12 +386,12 @@ header {
 }
 
 .scrolled1 {
-  background-color: var(--blueDarker) !important;
-  border-bottom: 1px solid var(--blueTechs);
+  background-color: var(--blueAbout) !important;
+  border-bottom: 1px solid var(--blueTools);
 }
 
 .scrolled2 {
-  background-color: var(--blueDarker) !important;
+  background-color: var(--blueAbout) !important;
 }
 
 .flagIMG img {
@@ -423,7 +430,7 @@ header {
 /* ========= ABO UT ===========*/
 #about {
   min-height: var(--heightNoNav);
-  background-color: var(--blueDarker);
+  background-color: var(--blueAbout);
   color: white;
   position: relative;
 }
@@ -478,7 +485,7 @@ header {
 
 .aboutProfile img {
   padding: 0;
-  box-shadow: -5px -5px 0 var(--lightBlue);
+  box-shadow: -5px -5px 0 var(--blueLight);
   border: 1px solid black;
   outline: 2px solid white;
 }
@@ -515,8 +522,9 @@ header {
 /*===== tools ========*/
 #tools {
   min-height: var(--heightNoNav);
-  background-color: var(--blueTechs);
+  background-color: var(--blueTools);
   color: white;
+  position: relative;
 }
 
 #tools h2 {
@@ -534,7 +542,7 @@ header {
   letter-spacing: 1.4px;
 }
 
-.techIcon {
+.toolIcon {
   width: 45px;
   height: 45px;
 }
@@ -556,25 +564,18 @@ header {
 /*======== PROJECTS =======*/
 #projects {
   min-height: var(--heightNoNav);
-  background: var(--footerBlue);
-  background: var(--projectsBlue);
-  /*background:var(--blueTechs);*/
-  /*background-image: linear-gradient( 180deg,  #362d9e 60%, var(--cyanBlue) 92.3% );*/
+  background: var(--blueProjects);
   color: white;
   position: relative;
 }
 
 .project {
   color: white;
-  box-shadow: 0 0 15px 0 var(--cyanBlue);
-  /*width:1200px;*/
-  /*height:450px;*/
+  box-shadow: 0 0 15px 0 var(--blueCyan);
   max-width: 1200px;
-  background: var(--heroBlue);
-  border: 1px solid var(--lightBlue);
-  /*border: 1px solid rgba(255, 255, 255, 0.125);*/
+  background: var(--blueHero);
+  border: 1px solid var(--blueLight);
   display: flex;
-
   margin-bottom: 70px;
   border-radius: 8px;
   overflow: hidden;
@@ -587,7 +588,7 @@ header {
 }
 
 #projects .shape-fill {
-  fill: var(--contactBlue);
+  fill: var(--blueContact);
 }
 
 .projectMain {
@@ -604,7 +605,7 @@ header {
 }
 
 .projectLogo {
-  width: 75px;
+  width: 65px;
 }
 
 .projectMain {
@@ -629,7 +630,7 @@ header {
 
 .customScroll::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background-color: var(--cyanBlue);
+  background-color: var(--blueCyan);
   border: 3px solid rgba(22, 22, 22, 1);
 }
 
@@ -653,8 +654,8 @@ header {
 }
 
 .projectIcons {
-  background-color: var(--blueTechs);
-  height: 50%;
+  background-color: var(--blueTools);
+  /* height: 50%; */
   width: 100%;
   margin-top: auto;
   padding: 5px 0;
@@ -665,7 +666,7 @@ header {
 }
 
 .activeIcon {
-  background: var(--cyanBlue) !important;
+  background: var(--blueCyan) !important;
 }
 
 .paragraph2 {
@@ -731,7 +732,7 @@ header {
 }
 
 .techFooter div {
-  background: var(--heroBlue);
+  background: var(--blueHero);
 }
 
 .techFooter h3 {
@@ -770,7 +771,7 @@ header {
 }
 
 .projectModal .projectMain {
-  background: var(--blueDarker);
+  background: var(--blueAbout);
 
   display: flex !important;
 }
@@ -779,14 +780,14 @@ header {
 
 #contact {
   color: white;
-  background-color: var(--contactBlue);
+  background-color: var(--blueContact);
   min-height: 600px;
   position: relative;
   padding: 60px 0;
 }
 
 #contact .shape-fill {
-  fill: var(--footerBlue);
+  fill: var(--blueFooter);
 }
 
 .contactForm {
@@ -799,7 +800,7 @@ header {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
-  border: 3px solid var(--lightBlue);
+  border: 3px solid var(--blueLight);
   padding: 9px;
   font-size: 1.1em;
 }
@@ -816,7 +817,7 @@ header {
 }
 
 .contactForm button {
-  border: 1px solid var(--cyanBlue);
+  border: 1px solid var(--blueCyan);
 }
 
 #contact form label {
@@ -837,7 +838,7 @@ header {
 
 #contact form input,
 textarea {
-  box-shadow: 3px 3px 0 var(--lightBlue);
+  box-shadow: 3px 3px 0 var(--blueLight);
   /*box-shadow: 0 0 25px 0 rgba( 255, 255, 255, 0.86);*/
   border: 1px solid white;
 }
@@ -865,7 +866,7 @@ textarea {
 #contact form input:focus,
 #contact form textarea:focus,
 #contact form button:hover {
-  box-shadow: 6px 6px 0 var(--lightBlue);
+  box-shadow: 6px 6px 0 var(--blueLight);
 }
 
 #contact form div {
@@ -880,7 +881,7 @@ textarea {
 
 /*/===== Footer =====*/
 footer {
-  background-color: var(--footerBlue);
+  background-color: var(--blueFooter);
   min-height: 75px;
   padding-top: 10px;
   display: flex;

@@ -25,7 +25,6 @@ import Jira from "public/images/techs/Jira.svg";
 import WordPress from "public/images/techs/WordPress.svg";
 import Photoshop from "public/images/techs/Photoshop.svg";
 import Docker from "public/images/techs/Docker.svg";
-import { iconFinder } from "./iconFinder";
 import { Project, Tool } from "./types";
 
 export const priorityTools: Tool[] = [
@@ -53,18 +52,18 @@ export const secondaryTools: Tool[] = [
   { name: "Photoshop", icon: Photoshop },
   { name: "Docker", icon: Docker },
 ];
-export const tools = [...priorityTools, ...secondaryTools];
+export const toolsIconDictionary = [...priorityTools, ...secondaryTools];
 
 export const projectsList: Project[] = [
   {
     name: "Auratek",
     // descriptionKey is a key for i18next to access description (translated)
     descriptionKey: "Auratek description",
-    url: "https://auratek.vercel.app/",
+    url: "https://www.auratek.pl/",
     repo: "https://github.com/g4n3sha5/Auratek",
     img: auratek,
     logo: aurateklogo,
-    icons: iconFinder([
+    tools: [
       "HTML",
       "CSS",
       "React",
@@ -73,7 +72,7 @@ export const projectsList: Project[] = [
       "JavaScript",
       "Figma",
       "Git",
-    ]),
+    ],
   },
   {
     name: "Portfolio name",
@@ -82,7 +81,7 @@ export const projectsList: Project[] = [
     repo: "https://github.com/g4n3sha5/kamilmatysiak.pl",
     img: portfolio,
     logo: potrfoliologo,
-    icons: iconFinder([
+    tools: [
       "HTML",
       "CSS",
       "Bootstrap",
@@ -92,7 +91,7 @@ export const projectsList: Project[] = [
       "Python",
       "Figma",
       "Git",
-    ]),
+    ],
   },
   {
     name: "MATIVATED",
@@ -101,7 +100,7 @@ export const projectsList: Project[] = [
     repo: "https://github.com/g4n3sha5/MATIVATED_dev",
     img: mativated,
     logo: VAlogo,
-    icons: iconFinder([
+    tools: [
       "HTML",
       "CSS",
       "Bootstrap",
@@ -111,7 +110,7 @@ export const projectsList: Project[] = [
       "Python",
       "Figma",
       "Git",
-    ]),
+    ],
   },
   {
     name: "Crypto name",
@@ -120,7 +119,7 @@ export const projectsList: Project[] = [
     repo: "https://github.com/g4n3sha5/Krypto-Jarocin",
     img: kryptokantor,
     logo: kantorlogo,
-    icons: iconFinder([
+    tools: [
       "HTML",
       "CSS",
       "Bootstrap",
@@ -130,6 +129,6 @@ export const projectsList: Project[] = [
       "Python",
       "Figma",
       "Git",
-    ]),
+    ],
   },
 ];

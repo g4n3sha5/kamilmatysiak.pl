@@ -1,14 +1,7 @@
-// import mativated from "public/images/mativated.webp";
-// import kryptokantor from "public/images/kryptojarocin.webp";
-// import portfolio from "public/images/portfolio.webp";
-// import auratek from "public/images/auratek.webp";
-// import potrfoliologo from "public/images/buddha.png";
-// import kantorlogo from "public/images/kantor-logo.webp";
-// import VAlogo from "public/images/va-logo.png";
-// import aurateklogo from "public/images/aurateklogo.png";
 import { useTranslation } from "next-i18next";
 import { Project } from "./subcomponents/Projects/Project";
 import { projectsList } from "@/utils/constants";
+import { Wave } from "./subcomponents/Wave";
 
 export const Projects = () => {
   const { t } = useTranslation("index");
@@ -29,6 +22,7 @@ export const Projects = () => {
           }
         </article>
       </div>
+      <Wave />
     </section>
   );
 };

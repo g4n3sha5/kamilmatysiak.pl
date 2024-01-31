@@ -54,11 +54,11 @@ export const Contact = () => {
 
             <div className="techCity fitImg ">
               <Image
-                src="/techcity.webp"
+                src="/images/techcity.webp"
                 className="techCity"
                 alt="Tech illustration"
-                width="0"
-                height="0"
+                width="700"
+                height="700"
               />
               <h6>
                 Art by

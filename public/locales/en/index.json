@@ -1,6 +1,6 @@
 {
   "About": "About me",
-  "Tools": "Tools",
+  "ToolsNav": "SecondaryTools",
   "Projects": "Projects",
   "Contact": "Contact",
   "My name is": "Hello, my name is ",
@@ -9,8 +9,8 @@
   "About Paragraph2": "I am an enthusiast of tool, I have always been fascinated by computers, electronics and how they work. My greatest passion is Martial Arts. The range of my interests is wide, I like to read books about various topics Himalayanism, Buddhism, philosophy or history, physics and space, all of which bring a lot of lessons that I successfully apply to my life, and through this knowledge I realize that",
   "Possible": "everything is possible",
   "Tools Description": "In my life I have used many types of software, depending on the work I did, hence I have become familiar with various applications, ERP systems or internal platforms of companies. In addition, for myself or as part of business, I have done a lot of photo processing and graphic design. As a result, familiarity with new tools and systems comes quickly to me. I believe that the simplest solutions are the best.",
-  "Languages": "In my work so far, I have used the following languages, libraries and frameworks:",
-  "Tools": "And also the following tools:",
+  "PrimaryTools": "In my work so far, I have used the following PrimaryTools, libraries and frameworks:",
+  "SecondaryTools": "And also the following tools:",
   "Projects Description": "I created projects like tic-tac-toe (with unbeatable bot enemy), business card for healthy store, pacman-like game. These were projects created since 2019, at that time I did not use GitHub hence most of these projects were lost in the depths of disks. During my learning process to deepen my knowledge I have been doing various exercises or code challanges. My latest and most important web projects are:",
   "Crypto Description": "Static website for my cryptocurrency business project. Custom UX and logo design.",
   "Crypto name": "Crypto exchange business page",

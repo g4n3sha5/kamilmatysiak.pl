@@ -1,7 +1,9 @@
 import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 
-export type PriorityToolName =
+export type LanguageCode = "pl" | "en";
+
+export type PrimaryToolName =
   | "JavaScript"
   | "TypeScript"
   | "React"
@@ -25,11 +27,11 @@ export type SecondaryToolName =
   | "Photoshop"
   | "Docker";
 
-export type ToolName = PriorityToolName | SecondaryToolName;
+export type ToolName = PrimaryToolName | SecondaryToolName;
 
 export interface Tool {
   name: ToolName;
-  icon: ReactNode;
+  icon: any;
 }
 
 export interface Project {
@@ -39,5 +41,5 @@ export interface Project {
   repo: string;
   img: StaticImageData;
   logo: StaticImageData;
-  icons: Tool["icon"][];
+  tools: ToolName[];
 }

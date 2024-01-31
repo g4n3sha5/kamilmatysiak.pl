@@ -4,6 +4,7 @@ import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import cx from "classnames";
 import Image from "next/image";
+import { LanguageCode } from "@/utils/types";
 
 interface NavItem {
   name: string;
@@ -16,7 +17,6 @@ export const Navbar = () => {
   const [scrolled, setScrolled] = useState(0);
   const { locale, locales } = useRouter();
   const secondLang = locales.filter((lang) => lang !== locale)[0];
-
   const showNavbar = () => {
     if (navRef.current) {
       navRef.current.classList.toggle("navShow");
@@ -37,7 +37,7 @@ export const Navbar = () => {
 
   const NAV_ITEMS: NavItem[] = [
     { name: t("About"), href: "#about" },
-    { name: t("Tools"), href: "#tools" },
+    { name: t("ToolsNav"), href: "#tools" },
     { name: t("Projects"), href: "#projects" },
     { name: t("Contact"), href: "#contact" },
   ];
@@ -79,11 +79,14 @@ export const Navbar = () => {
             {NAV_ITEMS.map((navItem) => (
               <NavItem key={navItem.href} {...navItem} />
             ))}
+            <div className=" mx-lg-5 mt-1 my-0 flagWrap">
+              <LangComponent status="locale" lang={locale as LanguageCode} />
+              <LangComponent
+                status="secondLang"
+                lang={secondLang as LanguageCode}
+              />
+            </div>
           </ul>
-          <div className=" mx-lg-5 mt-1  my-0 flagWrap ">
-            <LangComponent status="locale" lang={locale} />
-            <LangComponent status="secondLang" lang={secondLang} />
-          </div>
         </div>
       </nav>
     </header>
@@ -100,25 +103,31 @@ const NavItem = ({ name, href }: NavItem) => {
   );
 };
 
-const LangComponent = ({ lang, status }: { lang: string; status: string }) => {
-  const ImageCustom = () => (
-    <Image
-      src={"/images/" + lang + "flag.png"}
-      width={60}
-      height={45}
-      alt="flag icon"
-    />
-  );
-
+const LangComponent = ({
+  lang,
+  status,
+}: {
+  lang: LanguageCode;
+  status: string;
+}) => {
   return (
     <div key={lang} className={`${status} fitImg flagIMG`}>
       {status === "locale" ? (
-        <ImageCustom />
+        <ImageCustom lang={lang} />
       ) : (
         <Link href="/" locale={lang}>
-          <ImageCustom />
+          <ImageCustom lang={lang} />
         </Link>
       )}
     </div>
   );
 };
+
+const ImageCustom = ({ lang }: { lang: string }) => (
+  <Image
+    src={"/images/" + lang + "flag.png"}
+    width={60}
+    height={45}
+    alt="flag icon"
+  />
+);

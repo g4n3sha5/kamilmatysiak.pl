@@ -6,12 +6,23 @@ import more from "public/images/more.png";
 import { Modal } from "./Modal";
 import { StaticImageData } from "next/image";
 import { Project as ProjectType } from "@/utils/types";
+import { toolsIconDictionary } from "@/utils/constants";
 
 export const Project = (props: ProjectType) => {
-  const { name, descriptionKey, url, repo, icons, img, logo } = props;
+  const { name, descriptionKey, url, repo, tools, img, logo } = props;
   const [show, setShow] = useState(false);
   const { t } = useTranslation("index");
   const condition = show ? "activeIcon" : "";
+  console.log(props);
+
+  if (!tools) return;
+
+  const toolsIcons = tools.map((tool) => {
+    const toolFound = toolsIconDictionary.find(
+      (item) => item.name.toLowerCase().trim() === tool.toLowerCase().trim(),
+    );
+    if (toolFound) return toolFound.icon;
+  });
 
   const handleClick = () => {
     return setShow(!show);
@@ -34,9 +45,9 @@ export const Project = (props: ProjectType) => {
 
         <div
           key={"modal" + repo}
-          className="projectRight d-flex flex-column  pt-3 align-items-center"
+          className="projectRight d-flex flex-column align-items-center"
         >
-          <div className="d-flex flex-column align-items-center justify-content-center h-100">
+          <div className="d-flex flex-column pt-1 align-items-center justify-content-center">
             <img
               aria-hidden="true"
               alt="Logo of project"
@@ -56,16 +67,14 @@ export const Project = (props: ProjectType) => {
               <BtnComponent icon={code} href={repo} />
             </div>
           </div>
-          <div className="projectIcons  px-1">
+          <div className="projectIcons px-1">
             <h1>{t("Tools")}</h1>
             <div
               className="d-flex flex-wrap justify-content-center
              align-items-center py-2 px-1 px-md-3 px-lg-1 mt-1"
             >
-              {icons.map((Icon, index) => (
-                <Fragment key={index}>
-                  <Icon className="tool" />
-                </Fragment>
+              {toolsIcons.map((Icon, index) => (
+                <Icon key={index} className="tool" />
               ))}
             </div>
           </div>
