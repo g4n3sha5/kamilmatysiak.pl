@@ -66,10 +66,11 @@ export const projectsList: Project[] = [
     tools: [
       "HTML",
       "CSS",
-      "React",
-      "NextJS",
       "Bootstrap",
       "JavaScript",
+      "React",
+      "NextJS",
+
       "Figma",
       "Git",
     ],
@@ -86,9 +87,9 @@ export const projectsList: Project[] = [
       "CSS",
       "Bootstrap",
       "JavaScript",
-      "HTMX",
-      "Django",
-      "Python",
+      "React",
+      "NextJS",
+
       "Figma",
       "Git",
     ],
