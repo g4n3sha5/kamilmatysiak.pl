@@ -1,25 +1,21 @@
-import {mailOptions, transporter} from "@/config/nodemailer";
+import { mailOptions, transporter } from "@/config/nodemailer";
 
+const handler = async (req, res) => {
+  if (req.method === "POST") {
+    const data = req.body;
 
-const handler = async (req, res) =>{
-    if (req.method === 'POST'){
-        const data = req.body;
-
-        try{
-            await transporter.sendMail({
-                ...mailOptions,
-                subject : data.subject,
-                text: data.message,
-
-            })
-        }
-        catch (error){
-                console.log(error)
-        }
+    try {
+      await transporter.sendMail({
+        ...mailOptions,
+        subject: data.subject,
+        text: data.message,
+      });
+    } catch (error) {
+      console.log(error);
     }
+  }
 
-    return res.send(200);
-}
+  return res.send(200);
+};
 
-
-export default handler
+export default handler;

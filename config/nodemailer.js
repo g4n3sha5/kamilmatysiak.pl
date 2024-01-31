@@ -1,20 +1,18 @@
 import nodemailer from "nodemailer";
 
 const email = process.env.EMAIL;
-const receivemail = 'kmatysiak-it@outlook.com'
-const pass= process.env.EMAIL_PASS;
-
+const receivemail = "kmatysiak-it@outlook.com";
+const pass = process.env.EMAIL_PASS;
 
 export const transporter = nodemailer.createTransport({
-service : 'outlook',
-    auth: {
-        user : email,
-        pass
-    }
-})
-
+  service: "outlook",
+  auth: {
+    user: email,
+    pass,
+  },
+});
 
 export const mailOptions = {
-    from:email,
-    to:receivemail
-}
+  from: email,
+  to: receivemail,
+};
