@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import cx from "classnames";
 import Image from "next/image";
 import { LanguageCode } from "@/utils/types";
-import { ArrowDown } from "./subcomponents/svg/ArrowDown";
 
 interface NavItem {
   name: string;
@@ -87,10 +86,6 @@ export const Navbar = () => {
                 secondLang={secondLang}
                 lang={locale as LanguageCode}
               />
-              {/* <LangComponent
-                status="secondLang"
-                lang={secondLang as LanguageCode}
-              /> */}
             </div>
           </ul>
         </div>
