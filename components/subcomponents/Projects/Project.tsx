@@ -13,9 +13,6 @@ export const Project = (props: ProjectType) => {
   const [show, setShow] = useState(false);
   const { t } = useTranslation("index");
   const condition = show ? "activeIcon" : "";
-  console.log(props);
-
-  if (!tools) return;
 
   const toolsIcons = tools.map((tool) => {
     const toolFound = toolsIconDictionary.find(
@@ -58,17 +55,18 @@ export const Project = (props: ProjectType) => {
 
             <div className="d-flex justify-content-center my-3 px-3 pb-1">
               <button
-                onClick={() => handleClick()}
-                className={`BtnComponent btn ${condition}`}
+                onClick={handleClick}
+                className={`iconButton btn ${condition}`}
               >
                 <img src={more.src} />
               </button>
-              <BtnComponent icon={web} href={url} />
-              <BtnComponent icon={code} href={repo} />
+              <IconButton icon={web} href={url} />
+              <IconButton icon={code} href={repo} />
             </div>
           </div>
+
           <div className="projectIcons px-1">
-            <h1>{t("Tools")}</h1>
+            <h1>{t("ToolsNav")}</h1>
             <div
               className="d-flex flex-wrap justify-content-center
              align-items-center py-2 px-1 px-md-3 px-lg-1 mt-1"
@@ -85,7 +83,7 @@ export const Project = (props: ProjectType) => {
   );
 };
 
-const BtnComponent = ({
+const IconButton = ({
   icon,
   href,
 }: {
@@ -97,7 +95,7 @@ const BtnComponent = ({
       key={href}
       href={href}
       target="_blank"
-      className="BtnComponent btn"
+      className="iconButton btn"
       rel="noreferrer"
     >
       <img src={icon.src} />

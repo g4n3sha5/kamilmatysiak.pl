@@ -686,7 +686,7 @@ header {
   height: 34px;
 }
 
-.BtnComponent {
+.iconButton {
   margin: 0 7px;
   background: rgba(255, 255, 255, 0.795);
   box-shadow: 0 8px 12px 0 rgba(31, 38, 135, 0.97);
@@ -721,12 +721,12 @@ header {
   }
 }
 
-.BtnComponent:hover {
+.iconButton:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
 
-.BtnComponent img {
+.iconButton img {
   width: 40px;
   height: 40px;
 }
