@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import cx from "classnames";
 import Image from "next/image";
 import { LanguageCode } from "@/utils/types";
+import { ArrowDown } from "./subcomponents/svg/ArrowDown";
 
 interface NavItem {
   name: string;
@@ -15,6 +16,7 @@ export const Navbar = () => {
   const navRef = useRef<HTMLDivElement>();
   const { t } = useTranslation("index");
   const [scrolled, setScrolled] = useState(0);
+  const scrollClassName = "scrolled" + scrolled;
   const { locale, locales } = useRouter();
   const secondLang = locales.filter((lang) => lang !== locale)[0];
   const showNavbar = () => {
@@ -45,8 +47,8 @@ export const Navbar = () => {
   return (
     <header
       className={cx(
+        scrollClassName,
         "navigation fixed-top navbar-dark rajdhani my-0 py-0  navbar-expand-xl slideInTop",
-        { scrolled: `scrolled${scrolled}` },
       )}
     >
       <nav className="h-100 p-0 navbar  py-lg-0">
@@ -79,12 +81,16 @@ export const Navbar = () => {
             {NAV_ITEMS.map((navItem) => (
               <NavItem key={navItem.href} {...navItem} />
             ))}
-            <div className=" mx-lg-5 mt-1 my-0 flagWrap">
-              <LangComponent status="locale" lang={locale as LanguageCode} />
+
+            <div className="mx-lg-5 mt-1 my-0 flagWrap">
               <LangComponent
+                secondLang={secondLang}
+                lang={locale as LanguageCode}
+              />
+              {/* <LangComponent
                 status="secondLang"
                 lang={secondLang as LanguageCode}
-              />
+              /> */}
             </div>
           </ul>
         </div>
@@ -95,7 +101,7 @@ export const Navbar = () => {
 
 const NavItem = ({ name, href }: NavItem) => {
   return (
-    <li className="nav-item" key={name}>
+    <li className="nav-item text-nowrap" key={name}>
       <Link className="nav-link" href={href} scroll={false}>
         {name}
       </Link>
@@ -105,29 +111,18 @@ const NavItem = ({ name, href }: NavItem) => {
 
 const LangComponent = ({
   lang,
-  status,
+  secondLang,
 }: {
   lang: LanguageCode;
-  status: string;
+  secondLang: string;
 }) => {
   return (
-    <div key={lang} className={`${status} fitImg flagIMG`}>
-      {status === "locale" ? (
-        <ImageCustom lang={lang} />
-      ) : (
-        <Link href="/" locale={lang}>
-          <ImageCustom lang={lang} />
-        </Link>
-      )}
+    <div className="langSwitcher d-flex text-white justify-content-center align-items-center">
+      <div className="lang font-700">{lang}</div>
+      <div className="mx-2 font-700">|</div>
+      <Link href="/" locale={secondLang} className="lang">
+        {secondLang}{" "}
+      </Link>
     </div>
   );
 };
-
-const ImageCustom = ({ lang }: { lang: string }) => (
-  <Image
-    src={"/images/" + lang + "flag.png"}
-    width={60}
-    height={45}
-    alt="flag icon"
-  />
-);

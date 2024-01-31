@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Linkedin from "public/images/linkedin.svg";
 import Github from "public/images/github.svg";
-import { Wave } from "@/components/subcomponents/Wave";
+import { Wave } from "@/components/subcomponents/svg/Wave";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import Image from "next/image";

@@ -1,7 +1,7 @@
 import { priorityTools, secondaryTools } from "@/utils/constants";
 import { Tool } from "@/utils/types";
 import { useTranslation } from "next-i18next";
-import { Wave } from "./subcomponents/Wave";
+import { Wave } from "./subcomponents/svg/Wave";
 
 export const Tools = () => {
   const { t } = useTranslation("index");

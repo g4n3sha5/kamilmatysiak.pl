@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next";
 import { Project } from "./subcomponents/Projects/Project";
 import { projectsList } from "@/utils/constants";
-import { Wave } from "./subcomponents/Wave";
+import { Wave } from "./subcomponents/svg/Wave";
 
 export const Projects = () => {
   const { t } = useTranslation("index");

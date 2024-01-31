@@ -10,7 +10,12 @@ body {
   background-color: var(--blackFooter);
   font-size: 16px;
 }
-
+header {
+  height: var(--navHeight);
+  font-size: 1.189rem;
+  background: var(--navPrimary);
+  letter-spacing: 2px;
+}
 h1 {
   font-size: 2.027rem;
 }
@@ -185,15 +190,15 @@ h3 {
 }
 
 .slideInLeft {
-  animation: 1s ease-in 1 slideInLeft;
+  animation: 0.7s ease-in 1 slideInLeft;
 }
 
 .slideInRight {
-  animation: 1s ease-out 1 slideInRight;
+  animation: 0.7s ease-out 1 slideInRight;
 }
 
 .slideInTop {
-  animation: 1s ease 1 slideInTop;
+  animation: 0.7s ease 1 slideInTop;
 }
 
 .heroSquare {
@@ -230,10 +235,13 @@ h3 {
   width: 65px;
   margin: 2px 4px;
 }
-
+/*  ======  WAVE ====== */
+section:not(#hero) {
+  padding-bottom: 60px;
+}
 .wave {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -241,16 +249,11 @@ h3 {
   transform: rotate(180deg);
 }
 
-#contact .wave {
-  position: absolute;
-  bottom: -3px;
-}
-
 .wave svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 59px;
+  height: 61px;
 }
 
 #hero .wave .shape-fill {
@@ -267,7 +270,7 @@ h3 {
 }
 
 .socialIcons a:hover svg {
-  fill: var(--blackFooter);
+  fill: var(--blueFooter);
   transform: scale(1.08);
 }
 
@@ -281,7 +284,7 @@ h3 {
 }
 
 .heroSquare .btn {
-  font-size: 1.5rem;
+  font-size: 1.33rem;
   width: 140px;
   background-color: var(--blueLight);
   color: black;
@@ -291,7 +294,7 @@ h3 {
 }
 
 .heroSquare .btn:hover {
-  scale: 102%;
+  scale: 108%;
 }
 
 #hero h1 {
@@ -308,18 +311,12 @@ h3 {
 }
 
 /* ====== NAVBAR ====== */
-header {
-  height: var(--navHeight);
-  font-size: 25px;
-  background: var(--navPrimary);
-  letter-spacing: 2px;
-}
 
 .nav-link {
   color: white !important;
   border-top: 3px solid transparent;
-  font-weight: 500 !important;
-  opacity: 0.85;
+  font-weight: 400 !important;
+  opacity: 1;
 }
 
 .navbar-collapse {
@@ -386,8 +383,9 @@ header {
 }
 
 .scrolled1 {
-  background-color: var(--blueAbout) !important;
-  border-bottom: 1px solid var(--blueTools);
+  /* background: rgba(0, 0, 0, 0.65) !important; */
+  /* background-color: var(--bluePink) !important; */
+  border-bottom: 1px solid var(--blueFooter);
 }
 
 .scrolled2 {
@@ -395,15 +393,21 @@ header {
 }
 
 .flagIMG img {
-  width: 100%;
-  height: 100%;
+  backdrop-filter: blur(5px);
+}
+.flagIMG.locale {
   background: rgba(255, 255, 255, 0.12);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   padding: 0 3px;
 }
-
+.arrowDown {
+  width: 30px;
+  height: auto;
+}
+.langSwitcher {
+  font-size: 12px;
+}
 .flagWrap {
   position: relative;
   display: flex;
@@ -413,6 +417,8 @@ header {
 .secondLang {
   display: none;
   position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
 }
 
 .secondLang img:hover {
@@ -444,14 +450,14 @@ header {
   width: 250px;
   font-weight: 500;
   padding-bottom: 0.15em;
-  padding-left: 1px;
+  padding-left: 15px;
   letter-spacing: 0.02em;
   margin: 2px 0 0.5em;
   font-size: 2.5rem;
 }
 
 #about .paragraph1 {
-  font-size: 1.1em;
+  font-size: 1.18em;
   font-weight: 300;
 }
 
@@ -462,8 +468,8 @@ header {
 }
 
 .paragraph1 {
-  line-height: 1.7;
-  letter-spacing: 1px;
+  line-height: 1.8rem;
+  letter-spacing: 0.9px;
   /*text-size-adjust: auto; */
 }
 
@@ -515,8 +521,7 @@ header {
 .line1 {
   background-color: lightgray;
   margin: 30px auto 10px;
-  /*width:80%;*/
-  height: 1px;
+  height: 2px;
 }
 
 /*===== tools ========*/
@@ -839,7 +844,6 @@ header {
 #contact form input,
 textarea {
   box-shadow: 3px 3px 0 var(--blueLight);
-  /*box-shadow: 0 0 25px 0 rgba( 255, 255, 255, 0.86);*/
   border: 1px solid white;
 }
 
@@ -924,8 +928,6 @@ footer h2 {
 
   .header1 {
     font-size: 3vw !important;
-    /*max-width:15vw;*/
-    /*width:auto;*/
   }
 
   .paragraph1 {

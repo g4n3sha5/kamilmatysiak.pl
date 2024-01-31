@@ -4,7 +4,7 @@ import Github from "public/images/github.svg";
 import Linkedin from "public/images/linkedin.svg";
 import temple from "public/images/yaniv-cohen.webp";
 import Link from "next/link";
-import { Wave } from "@/components/subcomponents/Wave";
+import { Wave } from "@/components/subcomponents/svg/Wave";
 import { useTranslation } from "next-i18next";
 
 export const Hero = () => {
@@ -43,7 +43,7 @@ export const Hero = () => {
               <Link
                 href="#about"
                 scroll={false}
-                className="d-block btn
+                className="d-block btn 
                             btn-outline-dark px-3 py-2 mt-5 rounded-3"
               >
                 {t("About")}

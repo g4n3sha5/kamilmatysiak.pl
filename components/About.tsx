@@ -1,6 +1,6 @@
 import { Trans, useTranslation } from "next-i18next";
 import Image from "next/image";
-import { Wave } from "./subcomponents/Wave";
+import { Wave } from "./subcomponents/svg/Wave";
 
 export const About = () => {
   const { t } = useTranslation("index");
