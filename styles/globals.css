@@ -12,7 +12,7 @@ body {
 }
 header {
   height: var(--navHeight);
-  font-size: 1.189rem;
+  font-size: 1.18rem;
   background: var(--navPrimary);
   letter-spacing: 2px;
 }
@@ -322,7 +322,7 @@ section:not(#hero) {
 .navbar-collapse {
   background: var(--navPrimary);
   transition: transform 0.4s ease 0s;
-  height: 380px;
+  max-height: 360px;
   transform: translateY(-380px);
   z-index: 1;
 }
@@ -408,29 +408,12 @@ section:not(#hero) {
 .langSwitcher {
   font-size: 12px;
 }
-.flagWrap {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
 
-.secondLang {
-  display: none;
-  position: absolute;
-  bottom: 50%;
-  transform: translateY(50%);
-}
-
-.secondLang img:hover {
-  transform: scale(1.1);
-}
-
-.flagWrap:hover {
-  cursor: pointer !important;
-}
-
-.flagWrap:hover .secondLang {
-  display: block !important;
+.secondLang:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--blueCyan);
+  font-weight: 800;
 }
 
 /* ========= ABO UT ===========*/

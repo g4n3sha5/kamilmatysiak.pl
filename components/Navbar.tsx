@@ -81,11 +81,18 @@ export const Navbar = () => {
               <NavItem key={navItem.href} {...navItem} />
             ))}
 
-            <div className="mx-lg-5 mt-1 my-0 flagWrap">
-              <LangComponent
-                secondLang={secondLang}
-                lang={locale as LanguageCode}
-              />
+            <div className="mx-lg-5 mt-3 mt-1 mt-lg-0 my-0  d-flex justify-content-center align-items-center">
+              <div className="langSwitcher d-flex text-white justify-content-center align-items-center">
+                <div className="font-700">{locale}</div>
+                <div className="mx-2 font-700 ">|</div>
+                <Link
+                  href="/"
+                  locale={secondLang as LanguageCode}
+                  className="secondLang"
+                >
+                  {secondLang}
+                </Link>
+              </div>
             </div>
           </ul>
         </div>
@@ -101,23 +108,5 @@ const NavItem = ({ name, href }: NavItem) => {
         {name}
       </Link>
     </li>
-  );
-};
-
-const LangComponent = ({
-  lang,
-  secondLang,
-}: {
-  lang: LanguageCode;
-  secondLang: string;
-}) => {
-  return (
-    <div className="langSwitcher d-flex text-white justify-content-center align-items-center">
-      <div className="lang font-700">{lang}</div>
-      <div className="mx-2 font-700">|</div>
-      <Link href="/" locale={secondLang} className="lang">
-        {secondLang}{" "}
-      </Link>
-    </div>
   );
 };

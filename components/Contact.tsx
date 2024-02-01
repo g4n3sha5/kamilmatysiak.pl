@@ -63,7 +63,7 @@ export const Contact = () => {
               />
               <h6>
                 Art by
-                <Link href="https://dribbble.com/Pro_Art">
+                <Link className="px-1" href="https://dribbble.com/Pro_Art">
                   Andrey Prokopenko
                 </Link>
               </h6>

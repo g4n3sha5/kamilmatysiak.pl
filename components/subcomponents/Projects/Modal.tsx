@@ -8,15 +8,10 @@ interface ModalProps {
   descriptionKey: string;
 }
 
-export const Modal = ({
-  show,
-  handleClick,
-  //   img,
-  descriptionKey,
-}: ModalProps) => {
+export const Modal = ({ show, handleClick, descriptionKey }: ModalProps) => {
   const { t } = useTranslation("index");
   const mobileStatus = useContext(MobileStatusContext);
-  console.log(mobileStatus);
+
   return (
     <div
       className="modal "
@@ -26,7 +21,7 @@ export const Modal = ({
       aria-hidden="true"
     >
       <div
-        className=" d-flex w-100 justify-content-center modal-dialog-centered m-0"
+        className="d-flex w-100 justify-content-center modal-dialog-centered m-0"
         role="document"
       >
         <div className="modal-content">
