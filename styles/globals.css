@@ -322,7 +322,7 @@ section:not(#hero) {
 .navbar-collapse {
   background: var(--navPrimary);
   transition: transform 0.4s ease 0s;
-  max-height: 360px;
+  max-height: 36g0px;
   transform: translateY(-380px);
   z-index: 1;
 }

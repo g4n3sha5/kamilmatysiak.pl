@@ -70,7 +70,6 @@ export const projectsList: Project[] = [
       "JavaScript",
       "React",
       "NextJS",
-
       "Figma",
       "Git",
     ],
@@ -89,7 +88,6 @@ export const projectsList: Project[] = [
       "JavaScript",
       "React",
       "NextJS",
-
       "Figma",
       "Git",
     ],
@@ -125,9 +123,6 @@ export const projectsList: Project[] = [
       "CSS",
       "Bootstrap",
       "JavaScript",
-      "HTMX",
-      "Django",
-      "Python",
       "Figma",
       "Git",
     ],

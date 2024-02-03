@@ -15,10 +15,10 @@ export const Project = (props: ProjectType) => {
   const condition = show ? "activeIcon" : "";
 
   const toolsIcons = tools.map((tool) => {
-    const toolFound = toolsIconDictionary.find(
+    const toolMatched = toolsIconDictionary.find(
       (item) => item.name.toLowerCase().trim() === tool.toLowerCase().trim(),
     );
-    if (toolFound) return toolFound.icon;
+    if (toolMatched) return toolMatched.icon;
   });
 
   const handleClick = () => {
@@ -60,6 +60,7 @@ export const Project = (props: ProjectType) => {
               >
                 <img src={more.src} />
               </button>
+
               <IconButton icon={web} href={url} />
               <IconButton icon={code} href={repo} />
             </div>

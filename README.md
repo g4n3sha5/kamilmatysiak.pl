@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/g4n3sha5/kamilmatysiak.pl">
-    <img src="public/images/buddha.png" alt="Logo" width="80" height="80">
+    <img src="buddha.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">kamilmatysiak.pl</h3>
@@ -28,7 +28,7 @@
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/g4n3sha5/kamilmatysiak.pl
+   git clone https://github.com/github_username/repo_name.git
    ```
 2. Install NPM packages
    ```sh
