@@ -2,5 +2,12 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "eslint.validate": ["javascript"]
+  "eslint.validate": [
+    "javascript"
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#302F16",
+    "titleBar.activeBackground": "#43411E",
+    "titleBar.activeForeground": "#FBFBF6"
+  }
 }

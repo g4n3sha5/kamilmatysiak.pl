@@ -1,5 +1,4 @@
 import { StaticImageData } from "next/image";
-import { ReactNode } from "react";
 
 export type LanguageCode = "pl" | "en";
 
@@ -12,7 +11,8 @@ export type PrimaryToolName =
   | "Django"
   | "HTML"
   | "CSS"
-  | "Bootstrap";
+  | "Bootstrap"
+  | "Tailwind";
 
 export type SecondaryToolName =
   | "Git"
@@ -31,7 +31,7 @@ export type ToolName = PrimaryToolName | SecondaryToolName;
 
 export interface Tool {
   name: ToolName;
-  icon: any;
+  icon: string;
 }
 
 export interface Project {

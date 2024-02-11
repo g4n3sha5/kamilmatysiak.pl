@@ -15,6 +15,7 @@ import ReactRouter from "public/images/techs/ReactRouter.svg";
 import iReact from "public/images/techs/React.svg";
 import NextJS from "public/images/techs/NextJS.svg";
 import Bootstrap from "public/images/techs/Bootstrap.svg";
+import Tailwind from "public/images/techs/Tailwind.svg";
 import Python from "public/images/techs/Python.svg";
 import Django from "public/images/techs/Django.svg";
 import HTMX from "public/images/techs/HTMX.svg";
@@ -37,6 +38,7 @@ export const priorityTools: Tool[] = [
   { name: "HTML", icon: HTML },
   { name: "CSS", icon: CSS },
   { name: "Bootstrap", icon: Bootstrap },
+  { name: "Tailwind", icon: Tailwind },
 ];
 
 export const secondaryTools: Tool[] = [
@@ -118,13 +120,6 @@ export const projectsList: Project[] = [
     repo: "https://github.com/g4n3sha5/Krypto-Jarocin",
     img: kryptokantor,
     logo: kantorlogo,
-    tools: [
-      "HTML",
-      "CSS",
-      "Bootstrap",
-      "JavaScript",
-      "Figma",
-      "Git",
-    ],
+    tools: ["HTML", "CSS", "Bootstrap", "JavaScript", "Figma", "Git"],
   },
 ];

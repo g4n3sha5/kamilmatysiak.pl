@@ -104,7 +104,7 @@ export const Navbar = () => {
 const NavItem = ({ name, href }: NavItem) => {
   return (
     <li className="nav-item text-nowrap" key={name}>
-      <Link className="nav-link" href={href} scroll={false}>
+      <Link className="nav-link text-white" href={href} scroll={false}>
         {name}
       </Link>
     </li>

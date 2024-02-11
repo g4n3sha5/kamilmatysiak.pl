@@ -43,8 +43,8 @@ export const Hero = () => {
               <Link
                 href="#about"
                 scroll={false}
-                className="d-block btn 
-                            btn-outline-dark px-3 py-2 mt-5 rounded-3"
+                className="d-block btn aboutBtn 
+                            btn-outline-dark px-3 py-1 mt-5 rounded-3"
               >
                 {t("About")}
               </Link>
