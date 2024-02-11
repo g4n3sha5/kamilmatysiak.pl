@@ -8,13 +8,13 @@ const App = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <meta charSet="utf-8" />
-        <title>Kamil Matysiak | Frontend Developer</title>
+        <title>Kamil Matysiak | Front-end Developer</title>
         <link rel="icon" type="image/x-icon" href="/images/buddha.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta
           name="description"
-          content="Kamil Matysiak portfolio - Junior Frontend Developer"
+          content="Kamil Matysiak portfolio - Junior Front-end Developer"
         />
       </Head>
       <Component {...pageProps} />

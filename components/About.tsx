@@ -15,10 +15,10 @@ export const About = () => {
             <div className="aboutProfile">
               <Image
                 aria-hidden="true"
-                src="/images/profile.jpg"
+                src="/images/profile.png"
                 alt="Profile picture"
                 height={220}
-                width={182}
+                width={191}
               />
             </div>
           </div>

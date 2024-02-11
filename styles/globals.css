@@ -468,7 +468,7 @@ section:not(#hero) {
 
 .aboutProfile img {
   padding: 0;
-  box-shadow: -5px -5px 0 var(--blueLight);
+  /* box-shadow: -5px -5px 0 var(--blueLight); */
   border: 1px solid black;
   outline: 2px solid white;
 }

@@ -1,5 +1,4 @@
 import { StaticImageData } from "next/image";
-
 export type LanguageCode = "pl" | "en";
 
 export type PrimaryToolName =
@@ -31,7 +30,7 @@ export type ToolName = PrimaryToolName | SecondaryToolName;
 
 export interface Tool {
   name: ToolName;
-  icon: string;
+  icon: any;
 }
 
 export interface Project {
