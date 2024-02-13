@@ -43,7 +43,6 @@ export const priorityTools: Tool[] = [
 
 export const secondaryTools: Tool[] = [
   { name: "Git", icon: Git },
-  { name: "Jira", icon: Jira },
   { name: "React Query", icon: ReactQuery },
   { name: "React Router", icon: ReactRouter },
   { name: "Jira", icon: Jira },
