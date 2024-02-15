@@ -42,7 +42,7 @@ const ToolIcon = (Tool) => {
 
 const ToolIconsWrapper = ({ mappedTools }: { mappedTools: Tool[] }) => {
   return (
-    <div className="pb-lg-3 mt-lg-2 mb-4  my-3 px-lg-3 d-flex justify-content-center flex-wrap">
+    <div className="pb-lg-3 mt-lg-2 mb-4  my-3 px-lg-3 d-flex justify-content-center  align-items-center flex-wrap">
       {mappedTools.map((tool, index) => (
         <ToolIcon key={tool.name + index} {...tool} />
       ))}

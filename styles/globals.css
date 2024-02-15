@@ -6,12 +6,12 @@
   --blueCyan: #4ccaf0;
   --blueAbout: #2e2686;
   --blueTools: #3b10d3;
-  --blackFooter: #191919;
+  --paleBlack: #191919;
   --blueHero: #3f37c9;
   --bluePink: #5f0cbd;
   --bluePurple: #2016c1;
   --blueProjects: #1f075b;
-  --blueContact: var(--blackFooter);
+  --blueContact: var(--paleBlack);
   --blueFooter: #00b4d8;
   --heightNoNav: calc(100vh - var(--navHeight));
 }
@@ -24,7 +24,7 @@ body {
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background-color: var(--blackFooter);
+  background-color: var(--paleBlack);
   font-size: 16px;
 }
 header {
@@ -301,7 +301,7 @@ section:not(#hero) {
   fill: var(--blueProjects);
 }
 #projects .wave .shape-fill {
-  fill: var(--blackFooter);
+  fill: var(--paleBlack);
 }
 
 .App {
@@ -316,12 +316,12 @@ section:not(#hero) {
 }
 
 .nav-link:hover {
-  color: var(--blueHero) !important;
+  color: var(--blueCyan) !important;
   opacity: 1;
 }
 
 .navbar-collapse {
-  background: var(--navPrimary);
+  background: var(--paleBlack);
   transition: transform 0.4s ease 0s;
   max-height: 36g0px;
   transform: translateY(-380px);
@@ -360,8 +360,8 @@ section:not(#hero) {
 
 @media (max-width: 370px) {
   .navbar-brand img {
-    width: 150px;
-    height: 31px;
+    width: 180px;
+    height: 38px;
     z-index: 55;
   }
 }
@@ -380,10 +380,11 @@ section:not(#hero) {
 
 .scrolled1 {
   border-bottom: 1px solid var(--blueFooter);
+  background: var(--paleBlack);
 }
 
 .scrolled2 {
-  background-color: var(--blueAbout) !important;
+  background-color: var(--paleBlack) !important;
 }
 
 .flagIMG img {
@@ -406,7 +407,7 @@ section:not(#hero) {
 .secondLang:hover {
   cursor: pointer;
   text-decoration: none;
-  color: var(--blueAbout);
+  color: var(--blueCyan);
   font-weight: 800;
 }
 
@@ -515,13 +516,13 @@ section:not(#hero) {
 
 .techWrapper {
   margin: 6px 13px;
-  max-width: 90px;
+  width: 95px;
+  overflow: hidden;
 }
-
 .techWrapper h6 {
   font-size: 1.3rem;
   font-weight: 500;
-  letter-spacing: 1.4px;
+  letter-spacing: 0.8px;
 }
 
 .toolIcon {
@@ -698,8 +699,13 @@ section:not(#hero) {
 
   .projectRight {
     max-width: none;
-    height: 500px;
+    height: auto;
     width: 80vw;
+  }
+}
+@media (max-width: 500px) {
+  .projectLogo {
+    width: 60px;
   }
 }
 

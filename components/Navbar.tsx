@@ -4,7 +4,6 @@ import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import cx from "classnames";
 import Image from "next/image";
-import { LanguageCode } from "@/utils/types";
 
 interface NavItem {
   name: string;
@@ -55,7 +54,7 @@ export const Navbar = () => {
           className="navbar-brand  m-0 p-0 h-100 d-flex align-items-center "
           href="/"
         >
-          <Image width={270} height={56} src="/images/logo.png" alt="logo" />
+          <Image width={270} height={56} src="/images/logotyp.png" alt="logo" />
         </Link>
         <button
           className="navbar-toggler mr-3"
@@ -87,7 +86,7 @@ export const Navbar = () => {
                 <div className="mx-2 font-700 ">|</div>
                 <Link
                   href="/"
-                  locale={secondLang as LanguageCode}
+                  locale={secondLang as LangualoggeCode}
                   className="secondLang"
                 >
                   {secondLang}

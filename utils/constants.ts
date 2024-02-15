@@ -2,7 +2,7 @@ import mativated from "public/images/mativated.webp";
 import kryptokantor from "public/images/kryptojarocin.webp";
 import portfolio from "public/images/portfolio.webp";
 import auratek from "public/images/auratek.webp";
-import potrfoliologo from "public/images/buddha.png";
+import potrfoliologo from "public/images/logo.png";
 import kantorlogo from "public/images/kantor-logo.webp";
 import VAlogo from "public/images/va-logo.png";
 import aurateklogo from "public/images/aurateklogo.png";

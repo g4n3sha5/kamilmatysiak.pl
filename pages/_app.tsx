@@ -9,7 +9,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Head>
         <meta charSet="utf-8" />
         <title>Kamil Matysiak | Front-end Developer</title>
-        <link rel="icon" type="image/x-icon" href="/images/buddha.png" />
+        <link rel="icon" type="image/x-icon" href="/images/logo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta
