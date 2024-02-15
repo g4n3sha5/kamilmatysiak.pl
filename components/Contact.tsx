@@ -52,8 +52,7 @@ export const Contact = () => {
                 <Linkedin width="58px" height="58px" fill="ghostwhite" />
               </a>
             </div>
-
-            <div className="techCity fitImg ">
+            <div className="techCity pt-lg-5 pl-lg-2 fitImg ">
               <Image
                 src="/images/techcity.webp"
                 className="techCity"

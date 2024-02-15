@@ -30,7 +30,7 @@ body {
 header {
   height: var(--navHeight);
   font-size: 1.18rem;
-  background: var(--navPrimary);
+  background: var(--paleBlack);
   letter-spacing: 2px;
 }
 h1 {
@@ -477,8 +477,6 @@ section:not(#hero) {
 .techCity {
   width: 35vw !important;
   height: auto;
-  padding-top: 45px;
-  padding-left: 10px;
 }
 
 .techCity h6 {

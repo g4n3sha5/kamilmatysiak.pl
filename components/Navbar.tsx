@@ -4,6 +4,7 @@ import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import cx from "classnames";
 import Image from "next/image";
+import { LanguageCode } from "@/utils/types";
 
 interface NavItem {
   name: string;
@@ -86,7 +87,7 @@ export const Navbar = () => {
                 <div className="mx-2 font-700 ">|</div>
                 <Link
                   href="/"
-                  locale={secondLang as LangualoggeCode}
+                  locale={secondLang as LanguageCode}
                   className="secondLang"
                 >
                   {secondLang}

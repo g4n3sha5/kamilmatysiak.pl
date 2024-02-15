@@ -8,8 +8,8 @@ export const Tools = () => {
 
   return (
     <section id="tools">
-      <div className="container px-lg-4  overflow-hidden">
-        <article className="mb-5">
+      <div className="container px-0 px-lg-4  overflow-hidden">
+        <article className="mb-5 px-4">
           <h1 className="header1">{t("ToolsNav")}</h1>
           <p>{t("Tools Description")}</p>
         </article>
@@ -42,7 +42,7 @@ const ToolIcon = (Tool) => {
 
 const ToolIconsWrapper = ({ mappedTools }: { mappedTools: Tool[] }) => {
   return (
-    <div className="pb-lg-3 mt-lg-2 mb-4  my-3 px-lg-3 d-flex justify-content-center  align-items-center flex-wrap">
+    <div className="pb-lg-3 mt-lg-2 mb-4 px-0 w-100 my-3 px-lg-3 d-flex justify-content-center  align-items-center flex-wrap">
       {mappedTools.map((tool, index) => (
         <ToolIcon key={tool.name + index} {...tool} />
       ))}
