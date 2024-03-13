@@ -514,13 +514,13 @@ section:not(#hero) {
 
 .techWrapper {
   margin: 6px 13px;
-  width: 95px;
+  width: 85px;
   overflow: hidden;
 }
 .techWrapper h6 {
   font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: 0.8px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
 }
 
 .toolIcon {

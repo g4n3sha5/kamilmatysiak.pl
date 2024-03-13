@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
@@ -18,6 +18,17 @@ export const Navbar = () => {
   const scrollClassName = "scrolled" + scrolled;
   const { locale, locales } = useRouter();
   const secondLang = locales.filter((lang) => lang !== locale)[0];
+
+  const navItems: NavItem[] = useMemo(
+    () => [
+      { name: t("About"), href: "#about" },
+      { name: t("ToolsNav"), href: "#tools" },
+      { name: t("Projects"), href: "#projects" },
+      { name: t("Contact"), href: "#contact" },
+    ],
+    [locale],
+  );
+  
   const showNavbar = () => {
     if (navRef.current) {
       navRef.current.classList.toggle("navShow");
@@ -35,13 +46,6 @@ export const Navbar = () => {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const NAV_ITEMS: NavItem[] = [
-    { name: t("About"), href: "#about" },
-    { name: t("ToolsNav"), href: "#tools" },
-    { name: t("Projects"), href: "#projects" },
-    { name: t("Contact"), href: "#contact" },
-  ];
 
   return (
     <header
@@ -77,7 +81,7 @@ export const Navbar = () => {
           id="navigation"
         >
           <ul className="navbar-nav pt-3 pt-xl-0 px-2 d-flex justify-content-center mb-5 mb-xl-0 ">
-            {NAV_ITEMS.map((navItem) => (
+            {navItems.map((navItem) => (
               <NavItem key={navItem.href} {...navItem} />
             ))}
 

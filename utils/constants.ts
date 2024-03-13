@@ -1,11 +1,11 @@
 import mativated from "public/images/mativated.webp";
 import kryptokantor from "public/images/kryptojarocin.webp";
-import portfolio from "public/images/portfolio.webp";
 import auratek from "public/images/auratek.webp";
-import potrfoliologo from "public/images/logo.png";
 import kantorlogo from "public/images/kantor-logo.webp";
 import VAlogo from "public/images/va-logo.png";
 import aurateklogo from "public/images/aurateklogo.png";
+import milologo from "public/images/milologo.png";
+import milo from "public/images/milo.webp";
 import HTML from "public/images/techs/HTML.svg";
 import CSS from "public/images/techs/CSS.svg";
 import JavaScript from "public/images/techs/JavaScript.svg";
@@ -18,47 +18,58 @@ import Bootstrap from "public/images/techs/Bootstrap.svg";
 import Tailwind from "public/images/techs/Tailwind.svg";
 import Python from "public/images/techs/Python.svg";
 import Django from "public/images/techs/Django.svg";
+import NodeJs from "public/images/techs/NodeJs.svg";
 import HTMX from "public/images/techs/HTMX.svg";
-import Postman from "public/images/techs/Postman.svg";
 import Figma from "public/images/techs/Figma.svg";
 import Git from "public/images/techs/Git.svg";
-import Jira from "public/images/techs/Jira.svg";
 import WordPress from "public/images/techs/WordPress.svg";
-import Photoshop from "public/images/techs/Photoshop.svg";
-import Docker from "public/images/techs/Docker.svg";
 import { Project, Tool } from "./types";
 
 export const priorityTools: Tool[] = [
-  { name: "JavaScript", icon: JavaScript },
+  { name: "HTML", icon: HTML },
+  { name: "CSS", icon: CSS },
+  { name: "Bootstrap", icon: Bootstrap },
+  { name: "Tailwind", icon: Tailwind },
   { name: "TypeScript", icon: TypeScript },
   { name: "React", icon: iReact },
   { name: "NextJS", icon: NextJS },
   { name: "Python", icon: Python },
   { name: "Django", icon: Django },
-  { name: "HTML", icon: HTML },
-  { name: "CSS", icon: CSS },
-  { name: "Bootstrap", icon: Bootstrap },
-  { name: "Tailwind", icon: Tailwind },
+  { name: "NodeJs", icon: NodeJs },
 ];
 
 export const secondaryTools: Tool[] = [
   { name: "Git", icon: Git },
   { name: "React Query", icon: ReactQuery },
   { name: "React Router", icon: ReactRouter },
-  { name: "Jira", icon: Jira },
-  { name: "Postman", icon: Postman },
   { name: "HTMX", icon: HTMX },
   { name: "WordPress", icon: WordPress },
   { name: "Figma", icon: Figma },
-  { name: "Photoshop", icon: Photoshop },
-  { name: "Docker", icon: Docker },
 ];
-export const toolsIconDictionary = [...priorityTools, ...secondaryTools];
+
+export const additionalTools: Tool[] = [
+  { name: "JavaScript", icon: JavaScript },
+];
+
+export const toolsIconDictionary = [
+  ...priorityTools,
+  ...secondaryTools,
+  ...additionalTools,
+];
 
 export const projectsList: Project[] = [
   {
-    name: "Auratek",
+    name: "Milo",
     // descriptionKey is a key for i18next to access description (translated)
+    descriptionKey: "Milo description",
+    url: "https://kivy.pl/",
+    repo: "https://imilo.pl/",
+    img: milo,
+    logo: milologo,
+    tools: ["HTML", "CSS", "Bootstrap", "TypeScript", "React", "Figma", "Git"],
+  },
+  {
+    name: "Auratek",
     descriptionKey: "Auratek description",
     url: "https://www.auratek.pl/",
     repo: "https://github.com/g4n3sha5/Auratek",
@@ -68,7 +79,7 @@ export const projectsList: Project[] = [
       "HTML",
       "CSS",
       "Bootstrap",
-      "JavaScript",
+      "TypeScript",
       "React",
       "NextJS",
       "Figma",
@@ -76,41 +87,13 @@ export const projectsList: Project[] = [
     ],
   },
   {
-    name: "Portfolio name",
-    descriptionKey: "Portfolio Description",
-    url: "https://www.kamilmatysiak.pl/",
-    repo: "https://github.com/g4n3sha5/kamilmatysiak.pl",
-    img: portfolio,
-    logo: potrfoliologo,
-    tools: [
-      "HTML",
-      "CSS",
-      "Bootstrap",
-      "JavaScript",
-      "React",
-      "NextJS",
-      "Figma",
-      "Git",
-    ],
-  },
-  {
-    name: "MATIVATED",
+    name: "Mativated: Refactor",
     descriptionKey: "VA Description",
-    url: "https://www.mativated.com/",
-    repo: "https://github.com/g4n3sha5/MATIVATED_dev",
+    url: "https://mativated-monorepo.vercel.app/",
+    repo: "https://github.com/g4n3sha5/mativated-monorepo",
     img: mativated,
     logo: VAlogo,
-    tools: [
-      "HTML",
-      "CSS",
-      "Bootstrap",
-      "JavaScript",
-      "HTMX",
-      "Django",
-      "Python",
-      "Figma",
-      "Git",
-    ],
+    tools: ["HTML", "CSS", "Tailwind", "TypeScript", "React", "Figma", "Git", "NodeJs"],
   },
   {
     name: "Crypto name",

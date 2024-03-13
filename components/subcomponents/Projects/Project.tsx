@@ -51,7 +51,7 @@ export const Project = (props: ProjectType) => {
               className="projectLogo"
               src={logo.src}
             />
-            <h1 className="text-center">{t(`${name}`)}</h1>
+            <h1 className="text-center">{name}</h1>
 
             <div className="d-flex justify-content-center my-3 px-3 pb-1">
               <button

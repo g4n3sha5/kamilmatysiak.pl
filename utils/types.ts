@@ -1,4 +1,6 @@
 import { StaticImageData } from "next/image";
+import { toolsIconDictionary } from "@/utils/constants";
+
 export type LanguageCode = "pl" | "en";
 
 export type PrimaryToolName =
@@ -11,7 +13,9 @@ export type PrimaryToolName =
   | "HTML"
   | "CSS"
   | "Bootstrap"
-  | "Tailwind";
+  | "Tailwind"
+  | "Photoshop"
+  | "NodeJs";
 
 export type SecondaryToolName =
   | "Git"
@@ -22,15 +26,15 @@ export type SecondaryToolName =
   | "Postman"
   | "HTMX"
   | "WordPress"
-  | "Figma"
-  | "Photoshop"
-  | "Docker";
+  | "Figma";
 
-export type ToolName = PrimaryToolName | SecondaryToolName;
+export type ToolName = (typeof toolsIconDictionary)[number]["name"];
 
 export interface Tool {
-  name: ToolName;
-  icon: any;
+  name: string;
+  icon: React.FunctionComponent<
+    React.SVGProps<SVGSVGElement> & { title?: string }
+  >;
 }
 
 export interface Project {
