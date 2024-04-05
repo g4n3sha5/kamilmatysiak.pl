@@ -20,6 +20,9 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
 }
+.kamil {
+  color: var(--blueCyan);
+}
 
 body {
   margin: 0;
@@ -120,20 +123,19 @@ section .container {
 }
 
 .heroImg {
-  background-position: 65% 44%;
+  background-position: center;
+  /* background-position: 65% 44%; */
   background-attachment: fixed;
-}
-
-.heroImg:before {
   position: absolute;
   content: "";
   width: 100%;
   height: 100%;
-  background-size: auto;
+  background-size: cover;
+  z-index: 1;
   background-repeat: no-repeat;
-  backdrop-filter: blur(1.4px);
-  filter: saturate(100%) invert(16%) sepia(35%) saturate(111%)
-    hue-rotate(150deg);
+  backdrop-filter: blur(1px);
+  /* filter: saturate(100%) invert(16%) sepia(35%) saturate(111%)
+    hue-rotate(150deg); */
 }
 
 .rajdhani,
@@ -203,16 +205,23 @@ h3 {
 .heroSquare {
   z-index: 5;
   padding: 15px 30px;
-  background-color: var(--blueHero);
-  border: 2px solid white;
   border-radius: 12px;
   color: ghostwhite;
   min-height: 380px;
   width: 74%;
   overflow: hidden;
-  box-shadow: 0 0 25px 0 rgba(255, 255, 255, 0.86);
+  margin-top: 16vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 0 25px 0 rgba(255, 255, 255, 0.016);
 }
-
+.heroSquare .btn {
+  width: 140px;
+  background-color: var(--blueLight);
+  color: black;
+  font-weight: 600;
+  border-radius: 9px;
+  box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.3);
+}
 .socialIcons a:hover svg {
   fill: var(--blueFooter);
   transform: scale(1.08);
@@ -223,19 +232,6 @@ h3 {
   height: 65px;
 }
 
-.socialIcons a:first-child {
-  margin-right: 25px;
-}
-
-.heroSquare .btn {
-  font-size: 1.33rem;
-  width: 140px;
-  background-color: var(--blueLight);
-  color: black;
-  font-weight: 600;
-  border-radius: 9px;
-  box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.3);
-}
 .aboutBtn:hover {
   background: cyan;
   scale: 104%;
@@ -261,7 +257,6 @@ h3 {
 
 .heroSquare h1 {
   letter-spacing: 1.4px;
-  padding-bottom: 12px;
 }
 
 .heroSquare a {
@@ -277,6 +272,7 @@ section:not(#hero) {
 .wave {
   position: absolute;
   bottom: -1px;
+  z-index: 10;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -342,7 +338,7 @@ section:not(#hero) {
   }
 
   header {
-    background: rgba(0, 0, 0, 0.08);
+    background: rgba(0, 0, 0, 0.54);
   }
 
   .navbar-collapse {
@@ -464,12 +460,10 @@ section:not(#hero) {
 .aboutProfile img {
   object-fit: cover;
   display: block;
-  vertical-align: bottom;
 }
 
 .aboutProfile img {
   padding: 0;
-  /* box-shadow: -5px -5px 0 var(--blueLight); */
   border: 1px solid black;
   outline: 2px solid var(--blueCyan);
 }
@@ -887,14 +881,6 @@ footer h2 {
 @media (min-width: 2100px) {
   body {
     font-size: 1.1vw !important;
-  }
-
-  .heroSquare {
-    max-width: 760px;
-  }
-
-  .heroSquare h1 {
-    font-size: 1.4vw;
   }
 
   .heroSquare .btn {
