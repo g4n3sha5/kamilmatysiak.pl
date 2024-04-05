@@ -21,7 +21,8 @@ body {
   overflow-x: hidden;
 }
 .kamil {
-  color: var(--blueCyan);
+  color: var(--blueLight);
+  font-size: 2.32rem;
 }
 
 body {
@@ -97,6 +98,9 @@ section .container {
 .navPadding {
   padding-top: var(--navHeight) !important;
 }
+.navMargin {
+  margin-top: calc(var(--navHeight) + 10px) !important;
+}
 
 .font-600 {
   font-weight: 600;
@@ -114,7 +118,7 @@ section .container {
 
 @media (max-width: 768px) {
   #hero {
-    height: 150vh;
+    height: 100vh;
   }
 
   .rightColumnHero {
@@ -204,14 +208,13 @@ h3 {
 
 .heroSquare {
   z-index: 5;
-  padding: 15px 30px;
   border-radius: 12px;
   color: ghostwhite;
-  min-height: 380px;
-  width: 74%;
+  min-height: 400px;
+  margin-left: 4vw;
   overflow: hidden;
-  margin-top: 16vh;
-  background-color: rgba(0, 0, 0, 0.65);
+  margin-top: 16vh !important;
+  background-color: rgba(0, 0, 0, 0.67);
   box-shadow: 0 0 25px 0 rgba(255, 255, 255, 0.016);
 }
 .heroSquare .btn {
@@ -232,6 +235,10 @@ h3 {
   height: 65px;
 }
 
+.aboutBtn {
+  font-size: 1.5rem;
+  letter-spacing: 0.04rem;
+}
 .aboutBtn:hover {
   background: cyan;
   scale: 104%;
@@ -252,6 +259,9 @@ h3 {
 
   .heroImg {
     height: var(--heightNoNav);
+  }
+  .heroSquare {
+    margin: 0;
   }
 }
 
@@ -898,7 +908,7 @@ footer h2 {
   }
 
   .paragraph1 {
-    font-size: 1.5vw !important;
+    font-size: 32px !important;
   }
 
   .possible {

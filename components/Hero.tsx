@@ -11,19 +11,19 @@ export const Hero = () => {
 
   return (
     <section id="hero">
-      <div className="container-fluid px-0  position-relative overflow-hidden d-flex align-items-start justify-content-center justify-content-lg-start">
+      <div className="container-fluid px-0  position-relative overflow-hidden d-flex align-items-start justify-content-center  justify-content-lg-start">
         <div
           style={{ backgroundImage: `url(${hero.src})` }}
           className=" heroImg h-100 overflow-hidden"
         ></div>
-        <div className="col-11 col-lg-6 z-1 ml-lg-5  d-flex justify-content-center align-items-start  px-1 p-xl-3 overflow-hidden heroSquare rajdhani d-flex flex-column slideInLeft">
+        <div className="col-11 col-lg-6 z-1  d-flex justify-content-center align-items-start  px-4 p-xl-5 overflow-hidden heroSquare rajdhani d-flex flex-column slideInLeft ">
           <h1 className="mb-1 display-5">
             {t("My name is")}
             <span className="font-600 kamil"> Kamil Matysiak</span>
           </h1>
-          <h2 className="display-4 pl-2 font-700">Web Developer</h2>
+          <h2 className="display-4 font-700">Web Developer</h2>
 
-          <div className="mt-2 socialIcons d-flex px-2 flex-column">
+          <div className="mt-2 socialIcons d-flex flex-column">
             <div className="d-flex">
               <a href="https://github.com/g4n3sha5">
                 <Github width="48px" height="48px" fill="white" />
@@ -35,8 +35,8 @@ export const Hero = () => {
             <Link
               href="#about"
               scroll={false}
-              className="d-block btn aboutBtn 
-                            btn-outline-dark  px-3 py-1 mt-4 rounded-3 text-center flex d-flex align-items-center justify-content-center"
+              className="btn aboutBtn 
+                            px-3 py-1 mt-4 rounded-3 text-center flex d-flex align-items-center justify-content-center"
             >
               {t("About")}
             </Link>
