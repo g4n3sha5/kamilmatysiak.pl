@@ -45,7 +45,7 @@ export const Contact = () => {
             <p>{t("Interested")}</p>
             <h3>kmatysiak-it@outlook.com</h3>
             <div className="mt-4  socialIcons  px-2">
-              <a href="https://github.com/g4n3sha5">
+              <a className="mx-3" href="https://github.com/g4n3sha5">
                 <Github width="58px" height="58px" fill="ghostwhite" />
               </a>
               <a href="https://www.linkedin.com/in/kamilmatysiak">
