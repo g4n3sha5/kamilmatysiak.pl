@@ -11,7 +11,7 @@ export const Hero = () => {
 
   return (
     <section id="hero">
-      <div className="container-fluid px-0  position-relative overflow-hidden d-flex align-items-start justify-content-center  justify-content-lg-start">
+      <div className="container-fluid px-0  position-relative overflow-hidden d-flex align-items-start justify-content-center  justify-content-lg-start py-5">
         <div
           style={{ backgroundImage: `url(${hero.src})` }}
           className=" heroImg h-100 overflow-hidden"
@@ -36,7 +36,7 @@ export const Hero = () => {
               href="#about"
               scroll={false}
               className="btn aboutBtn 
-                            px-3 py-1 mt-4 rounded-3 text-center flex d-flex align-items-center justify-content-center"
+                            px-3 py-1 mt-4 rounded-3 text-center flex d-flex align-items-center justify-content-center w-auto"
             >
               {t("About")}
             </Link>
