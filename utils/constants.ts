@@ -105,7 +105,7 @@ export const projectsList: Project[] = [
     ],
   },
   {
-    name: "Krypto Jarocin",
+    name: "Krypto Jarocin1",
     descriptionKey: "Crypto Description",
     url: "https://g4n3sha5.github.io/Krypto-Jarocin/",
     repo: "https://github.com/g4n3sha5/Krypto-Jarocin",
