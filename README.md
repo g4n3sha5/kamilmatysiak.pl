@@ -15,7 +15,7 @@
 
 </div>
 
-[![Kamil.png](https://postimg.cc/WqNSCVzq)
+
 
 ### Built With
 
