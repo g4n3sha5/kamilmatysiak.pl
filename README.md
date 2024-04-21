@@ -12,6 +12,8 @@
     This is my personal portfolio page. Made according to my idea and design.
 
   </p>
+  ![image](https://github.com/g4n3sha5/kamilmatysiak.pl/assets/116462435/061105fe-2f66-4208-ac59-29add5ba3639)
+
 </div>
 
 [![kamilmat.png](https://i.postimg.cc/XYkGVt4F/kamilmat.png)](www.kamilmatysiak.pl)
