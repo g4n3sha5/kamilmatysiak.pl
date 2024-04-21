@@ -15,7 +15,7 @@
 
 </div>
 
-[![Kamil.png](https://i.postimg.cc/Zn3g9KhH/Kamil.png)](https://postimg.cc/WqNSCVzq)
+[![Kamil.png](https://postimg.cc/WqNSCVzq)
 
 ### Built With
 
