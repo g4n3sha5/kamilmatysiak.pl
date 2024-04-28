@@ -221,9 +221,9 @@ h3 {
   width: 140px;
   background-color: var(--blueLight);
   color: black;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 9px;
-  box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.5);
 }
 .socialIcons a:hover svg {
   fill: var(--blueFooter);
