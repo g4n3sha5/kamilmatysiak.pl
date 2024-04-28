@@ -59,6 +59,24 @@ export const toolsIconDictionary = [
 
 export const projectsList: Project[] = [
   {
+    name: "Mativated: Refactor",
+    descriptionKey: "VA Description",
+    url: "https://mativated-monorepo.vercel.app/",
+    repo: "https://github.com/g4n3sha5/mativated-monorepo",
+    img: mativated,
+    logo: VAlogo,
+    tools: [
+      "HTML",
+      "CSS",
+      "Tailwind",
+      "TypeScript",
+      "React",
+      "Figma",
+      "Git",
+      "NodeJs",
+    ],
+  },
+  {
     name: "Milo",
     // descriptionKey is a key for i18next to access description (translated)
     descriptionKey: "Milo description",
@@ -86,26 +104,9 @@ export const projectsList: Project[] = [
       "Git",
     ],
   },
+
   {
-    name: "Mativated: Refactor",
-    descriptionKey: "VA Description",
-    url: "https://mativated-monorepo.vercel.app/",
-    repo: "https://github.com/g4n3sha5/mativated-monorepo",
-    img: mativated,
-    logo: VAlogo,
-    tools: [
-      "HTML",
-      "CSS",
-      "Tailwind",
-      "TypeScript",
-      "React",
-      "Figma",
-      "Git",
-      "NodeJs",
-    ],
-  },
-  {
-    name: "Krypto Jarocin1",
+    name: "Krypto Jarocin",
     descriptionKey: "Crypto Description",
     url: "https://g4n3sha5.github.io/Krypto-Jarocin/",
     repo: "https://github.com/g4n3sha5/Krypto-Jarocin",
