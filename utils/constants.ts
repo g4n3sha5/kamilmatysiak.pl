@@ -61,7 +61,7 @@ export const projectsList: Project[] = [
   {
     name: "Mativated: Refactor",
     descriptionKey: "VA Description",
-    url: "https://mativated-monorepo.vercel.app/",
+    url: "https://mativated.space/",
     repo: "https://github.com/g4n3sha5/mativated-monorepo",
     img: mativated,
     logo: VAlogo,

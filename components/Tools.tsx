@@ -8,7 +8,7 @@ export const Tools = () => {
 
   return (
     <section id="tools">
-      <div className="container px-0 px-lg-4  overflow-hidden">
+      <div className="container px-0 w-screen overflow-hidden">
         <article className="mb-5 px-4">
           <h1 className="header1">{t("ToolsNav")}</h1>
           <p>{t("Tools Description")}</p>
