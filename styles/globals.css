@@ -236,8 +236,8 @@ h3 {
 }
 
 .aboutBtn {
-  font-size: 1.5rem;
-  letter-spacing: 0.04rem;
+  font-size: 1.45rem;
+  letter-spacing: -0.08rem;
 }
 .aboutBtn:hover {
   background: cyan;

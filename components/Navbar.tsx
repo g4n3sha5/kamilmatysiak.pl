@@ -19,16 +19,14 @@ export const Navbar = () => {
   const { locale, locales } = useRouter();
   const secondLang = locales.filter((lang) => lang !== locale)[0];
 
-  const navItems: NavItem[] = useMemo(
-    () => [
-      { name: t("About"), href: "#about" },
-      { name: t("ToolsNav"), href: "#tools" },
-      { name: t("Projects"), href: "#projects" },
-      { name: t("Contact"), href: "#contact" },
-    ],
-    [locale],
-  );
-  
+  const navItems: NavItem[] = [
+    { name: t("About"), href: "#about" },
+    { name: t("ToolsNav"), href: "#tools" },
+    { name: t("Projects"), href: "#projects" },
+    { name: t("Contact"), href: "#contact" },
+  ];
+
+  console.log(navItems);
   const showNavbar = () => {
     if (navRef.current) {
       navRef.current.classList.toggle("navShow");
