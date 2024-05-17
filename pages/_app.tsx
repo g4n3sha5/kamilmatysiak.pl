@@ -14,7 +14,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta name="theme-color" content="#000000" />
         <meta
           name="description"
-          content="Kamil Matysiak portfolio - Web Developer"
+          content="Kamil Matysiak Portfolio - Web Developer"
         />
       </Head>
       <Component {...pageProps} />
