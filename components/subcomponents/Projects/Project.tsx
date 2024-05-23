@@ -26,7 +26,7 @@ export const Project = (props: ProjectType) => {
   };
 
   return (
-    <Fragment key={"key" + repo}>
+    <Fragment>
       <article key={repo} className="project ">
         <div
           className={`${

@@ -26,7 +26,6 @@ export const Navbar = () => {
     { name: t("Contact"), href: "#contact" },
   ];
 
-  console.log(navItems);
   const showNavbar = () => {
     if (navRef.current) {
       navRef.current.classList.toggle("navShow");

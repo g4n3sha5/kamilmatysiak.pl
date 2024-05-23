@@ -5,6 +5,18 @@
   --blueLight: #1bd8fb;
   --blueCyan: #4ccaf0;
   --blueAbout: #2e2686;
+  --blueTools: #3111a3;
+  --paleBlack: #191919;
+  --blueHero: #3f37c9;
+  --bluePink: #5f0cbd;
+  --bluePurple: #2016c1;
+  --blueProjects: #1f075b;
+  --blueContact: var(--paleBlack);
+  --blueFooter: #351c97;
+  /* --paleBlue: #4361ee;
+  --blueLight: #1bd8fb;
+  --blueCyan: #4ccaf0;
+  --blueAbout: #2e2686;
   --blueTools: #3b10d3;
   --paleBlack: #191919;
   --blueHero: #3f37c9;
@@ -12,7 +24,7 @@
   --bluePurple: #2016c1;
   --blueProjects: #1f075b;
   --blueContact: var(--paleBlack);
-  --blueFooter: #00b4d8;
+  --blueFooter: #00b4d8; */
   --heightNoNav: calc(100vh - var(--navHeight));
 }
 html,
@@ -786,7 +798,6 @@ section:not(#hero) {
   width: 80%;
   min-height: 500px;
   background: rgba(54, 3, 154, 0.75);
-  box-shadow: rgba(255, 255, 255, 1) 0px 0px 14px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
@@ -881,7 +892,7 @@ footer {
 footer h2 {
   font-size: 21px;
   letter-spacing: 2px;
-  color: #0c1f2d !important;
+  color: white !important;
   display: inline;
   padding: 11px;
   border-top: 1px solid white;
